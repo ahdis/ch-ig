@@ -19,6 +19,7 @@ See also https://help.github.com/en/articles/creating-a-repository-from-a-templa
     * ig.json
 * Rename the file *ch.fhir.ig.**ig**.xml* in folder resources\implementationsguide to *ch.fhir.ig.**name**.xml*
 * Rename the file *ch.**ig**.patient.xml* in folder resources\structuredefinition to *ch.**name**.patient.xml*
+* Change the content of the file README.md
 
 ## Example resource and structure definition
 * Franz Muster is an example of the patient **resource**: examples\patient\FranzMuster.xml
