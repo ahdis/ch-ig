@@ -17,6 +17,7 @@ See also https://help.github.com/en/articles/creating-a-repository-from-a-templa
 * Replace **ig** (e.g. *ch.fhir.ig.**ig*** &rarr; *ch.fhir.ig.**name***) at all appropriate places with the desired name of the implementation guide:  
     * resources\implementationguide\ch.fhir.ig.ig.xml
     * ig.json
+    * resources\structuredefinition\ch-ig-patient.xml
 * Rename the file *ch.fhir.ig.**ig**.xml* in folder resources\implementationsguide to *ch.fhir.ig.**name**.xml*
 * Rename the file *ch.**ig**.patient.xml* in folder resources\structuredefinition to *ch.**name**.patient.xml*
 * Change the content of the file README.md
