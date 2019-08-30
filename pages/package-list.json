@@ -1,7 +1,7 @@
 {
-  "package-id": "ch.fhir.ig.ig",
+  "package-id": "ch.fhir.ig.ch-ig",
   "title": "CH-IG (R4)",
-  "introduction": "Implementation guide for the meta data specified in the framework of Annex 3 of the FDHA Ordinance on the electronic patient record in Switzerland",
+  "introduction": "Implementation guide for ...",
   "canonical": "http://fhir.ch/ig/ch-ig",
   "list": [
     {

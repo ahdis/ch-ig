@@ -3,7 +3,7 @@
   "version": "4.0.0",
   "fixed-business-version": "0.0.1",
   "license": "CC-BY-SA-4.0",
-  "npm-name": "ch.fhir.ig.ig",
+  "npm-name": "ch.fhir.ig.ch-ig",
   "paths": {
     "resources": [
       "resources",
@@ -14,7 +14,7 @@
     "output": "output",
     "qa": "qa",
     "txCache": "txCache",
-    "specification": "http:/hl7.org/fhir/r4"
+    "specification": "http://hl7.org/fhir/r4"
   },
   "language": "en",
   "languages": [
@@ -40,11 +40,11 @@
   "dependencyList": [
     {
       "name": "chcore",
-      "package": "ch.fhir.ig.core",
+      "package": "ch.fhir.ig.ch-core",
       "version": "dev"
     }
   ],
-  "source": "implementationguide/ch.fhir.ig.ig.xml",
+  "source": "implementationguide/ch.fhir.ig.ch-ig.xml",
   "sct-edition": "http://snomed.info/sct/900000000000207008",
   "resources": {},
   "suppressedWarningFile": "suppressedwarnings.txt",
