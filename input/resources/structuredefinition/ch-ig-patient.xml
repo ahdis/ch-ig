@@ -22,7 +22,6 @@
             <code value="CH"/>
         </coding>
     </jurisdiction>
-    <purpose value="Core patient demographics which can be shared" />
     <fhirVersion value="4.0.1" />
     <mapping>
         <identity value="CDA-CH-V2"/>
@@ -47,7 +46,7 @@
     <differential>
         <element id="Patient">
             <path value="Patient"/>
-            <short value="CH Core Patient"/>
+            <short value="CH IG Patient"/>
             <mustSupport value="false"/>
             <isModifier value="false"/>
         </element>
