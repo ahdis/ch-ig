@@ -1,4 +1,5 @@
 input-cache/org.hl7.fhir.publisher.jar
+input-cache/**
 output/**
 temp/**
 template/**
