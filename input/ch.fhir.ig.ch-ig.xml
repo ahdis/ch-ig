@@ -39,13 +39,13 @@
       <reference>
         <reference value="Composition/Zuweisung"/>
       </reference>
-      <exampleCanonical value="http://fhir.ch/ig/ch-ig/StructureDefinition/ch-ig-composition"/>
+      <exampleCanonical value="StructureDefinition/ch-ig-composition"/>
     </resource>
     <resource>
       <reference>
         <reference value="Patient/FranzMuster"/>
       </reference>
-      <exampleCanonical value="http://fhir.ch/ig/ch-ig/StructureDefinition/ch-ig-patient"/>
+      <exampleCanonical value="StructureDefinition/ch-ig-patient"/>
     </resource>
 
     <!-- References to code systems -->
