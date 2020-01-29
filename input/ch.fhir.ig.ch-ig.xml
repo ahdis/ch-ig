@@ -39,12 +39,16 @@
       <reference>
         <reference value="Composition/Zuweisung"/>
       </reference>
+      <name value="Zuweisung"/>
+      <description value="Example for Composition"/>
       <exampleCanonical value="StructureDefinition/ch-ig-composition"/>
     </resource>
     <resource>
       <reference>
         <reference value="Patient/FranzMuster"/>
       </reference>
+      <name value="FranzMuster"/>
+      <description value="Example for Patient"/>
       <exampleCanonical value="StructureDefinition/ch-ig-patient"/>
     </resource>
 
@@ -78,6 +82,7 @@
       <exampleBoolean value="false"/>
     </resource>
 
+    <!-- pages, parameters -->
     <page>
       <nameUrl value="toc.html"/>
       <title value="Table of Contents"/>
@@ -88,5 +93,17 @@
         <generation value="markdown"/>
       </page>
     </page>
+    <parameter>
+      <code value="releaselabel"/>
+      <value value="CI build"/>
+    </parameter>
+    <parameter>
+      <code value="path-pages" />
+      <value value="input/pages"/>
+    </parameter>
+    <parameter>
+      <code value="copyrightyear"/>
+      <value value="2019+"/>
+    </parameter>
   </definition>
 </ImplementationGuide>
