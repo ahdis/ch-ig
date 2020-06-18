@@ -5,13 +5,13 @@
   <text>
     <status value="additional"/>
     <div xmlns="http://www.w3.org/1999/xhtml">
-      ImplementationGuide for CH-IG
+      Implementation Guide for CH IG (R4)
     </div>
   </text>
   <url value="http://fhir.ch/ig/ch-ig/ImplementationGuide/ch.fhir.ig.ch-ig"/>
-  <version value="0.0.1"/>
+  <version value="0.1.0"/>
   <name value="CH_IG"/>
-  <title value="CH-IG"/>
+  <title value="CH IG (R4)"/>
   <status value="active"/>
   <experimental value="false"/>
   <date value="2019-07-02"/>
@@ -41,7 +41,7 @@
       </reference>
       <name value="Zuweisung"/>
       <description value="Example for Composition"/>
-      <exampleCanonical value="StructureDefinition/ch-ig-composition"/>
+      <exampleCanonical value="http://fhir.ch/ig/ch-ig/StructureDefinition/ch-ig-composition"/>
     </resource>
     <resource>
       <reference>
@@ -49,7 +49,7 @@
       </reference>
       <name value="FranzMuster"/>
       <description value="Example for Patient"/>
-      <exampleCanonical value="StructureDefinition/ch-ig-patient"/>
+      <exampleCanonical value="http://fhir.ch/ig/ch-ig/StructureDefinition/ch-ig-patient"/>
     </resource>
 
     <!-- References to code systems -->
@@ -92,6 +92,21 @@
         <title value="Home"/>
         <generation value="markdown"/>
       </page>
+      <page>
+        <nameUrl value="profiles.html"/>
+        <title value="Profiles"/>
+        <generation value="html"/>
+      </page>
+      <page>
+        <nameUrl value="extensions.html"/>
+        <title value="Extensions"/>
+        <generation value="html"/>
+      </page>
+      <page>
+        <nameUrl value="terminology.html"/>
+        <title value="Terminology"/>
+        <generation value="html"/>
+      </page>
     </page>
     <parameter>
       <code value="releaselabel"/>
@@ -103,7 +118,7 @@
     </parameter>
     <parameter>
       <code value="copyrightyear"/>
-      <value value="2019+"/>
+      <value value="2020+"/>
     </parameter>
   </definition>
 </ImplementationGuide>
