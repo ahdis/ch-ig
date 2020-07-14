@@ -82,7 +82,7 @@
       <exampleBoolean value="false"/>
     </resource>
 
-    <!-- pages, parameters -->
+    <!-- pages -->
     <page>
       <nameUrl value="toc.html"/>
       <title value="Table of Contents"/>
@@ -108,6 +108,8 @@
         <generation value="html"/>
       </page>
     </page>
+
+    <!-- parameters -->
     <parameter>
       <code value="releaselabel"/>
       <value value="CI build"/>

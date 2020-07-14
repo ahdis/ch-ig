@@ -1,8 +1,8 @@
 {
   "package-id": "ch.fhir.ig.ch-ig",
   "title": "CH IG (R4)",
-  "introduction": "Implementation guide for ...",
   "canonical": "http://fhir.ch/ig/ch-ig",
+  "introduction": "Implementation guide for ...",
   "list": [
     {
       "version": "dev",
@@ -10,7 +10,7 @@
       "path": "http://build.fhir.org/ig/ahdis/ch-ig",
       "status": "ci-build",
       "fhirversion": "4.0.1",
-      "sequence":"STU"
+      "current" : true
     },
     {
       "version": "0.1.0",

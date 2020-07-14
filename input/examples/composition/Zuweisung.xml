@@ -8,14 +8,14 @@
   <type>
     <coding>
       <system value="http://loinc.org"/>
-      <code value="18761-7"/>
-      <display value="Transfer summary note"/>
+      <code value="28616-1"/>
+      <display value="Physician Transfer note"/>
     </coding>
   </type>
   <subject>
     <reference value="Patient/FranzMuster"/>
   </subject>
-  <date value="2019-10-03T17:33:00+01:00"/>
+  <date value="2020-01-10T17:33:00+01:00"/>
   <author>
     <reference value="Patient/FranzMuster"/>
   </author>
