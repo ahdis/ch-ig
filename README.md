@@ -90,18 +90,18 @@ For further information see [here](https://github.com/ahdis/k8s-fhir.ch#publish-
 * Open the folder of the repository in VSC (File > Open Folder...)
 * Navigate to this repository in the therminal (`cd .\ch-ig\ `)
 
-## 3.2. Install the FHIR IG publisher
+## Install the FHIR IG publisher
 * In VSC press *F1* or *Ctrl+Shift+P*
 * Type following command in the field: *FHIR update Java Validator and IGPublisher*
 
-## 3.3. Build the IG
+## Build the IG
 * In VSC press *F1* or *Ctrl+Shift+P*
 * Type following command in the field: *FHIR run IGPublisher*
 * Copy the link from the result in your terminal in a web browser (`file:///C:/Users/username/Documents/GitHub/ch-ig/qa.html`)
 * Change `qa.html` to `index.html` and see your IG!
 
 
-# 4. Further links
+# Further links
 * [IG Publisher Documentation](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation)
 * [Using the FHIR Validator](https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Validator)
 * FHIR Chat [Zulip](chat.fhir.org)
