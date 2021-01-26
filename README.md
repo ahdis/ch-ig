@@ -47,3 +47,68 @@ For further information see [here](https://github.com/FHIR/auto-ig-builder#fhir-
 
 ## Publish the IG
 For further information see [here](https://github.com/ahdis/k8s-fhir.ch#publish-an-implementation-guide-ch-xyz-with-a-version-eg-010).
+
+
+
+# Setup your computer to work with an implementation guide
+
+## Editor: Visual Studio Code (VSC)
+* Install the editor Visual Studio Code as described [here](https://code.visualstudio.com/docs/setup/setup-overview)
+
+### VSC Extensions
+* Install the extension **FHIR tools** (yannick-lagger.vscode-fhir-tools)
+  * Go to **extensions** in the activity bar on the right side of VSC (shown as 4 squares)
+  * Search for this extension using the search field at the top left: *yannick-lagger.vscode-fhir-tools*
+  * Then install it
+
+* Install the extension **vscode-language-fsh** (kmahalingam.vscode-language-fsh)
+  * Installation as described above
+
+## Java
+* Install Java as described [here](https://www.java.com/en/download/help/download_options.html)
+
+## Jekyll
+* Installation: https://jekyllrb.com/ (see [Jekyll on Windows](http://jekyll-windows.juthilo.com/2-jekyll-gem/) for windows users)
+
+## SUSHI (and Node.js)
+* Install SUSHI (and Node.js) as described [here](https://fshschool.org/docs/sushi/installation/)
+
+## Git
+* Install Git as described [here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+
+## GitHub
+* Create a GitHub account as described [here](https://git-scm.com/book/en/v2/GitHub-Account-Setup-and-Configuration)
+* You should definitely set up two-factor authentication as it is described there in the lowest section
+
+
+# Get the implementation guide running 
+## Get the existing git repository
+* If you haven't already done so, create a local *GitHub* folder on your computer (e.g. `C:\Users\username\Documents\GitHub`).
+* Open a terminal in VSC (Terminal > New Terminal)
+* Navigate to the local *GitHub* folder in the terminal (`cd .\Documents\`, `cd .\GitHub\`)
+* Then clone the repository via the terminal: `git clone https://github.com/ahdis/ch-ig.git`
+* Open the folder of the repository in VSC (File > Open Folder...)
+* Navigate to this repository in the therminal (`cd .\ch-ig\ `)
+
+## 3.2. Install the FHIR IG publisher
+* In VSC press *F1* or *Ctrl+Shift+P*
+* Type following command in the field: *FHIR update Java Validator and IGPublisher*
+
+## 3.3. Build the IG
+* In VSC press *F1* or *Ctrl+Shift+P*
+* Type following command in the field: *FHIR run IGPublisher*
+* Copy the link from the result in your terminal in a web browser (`file:///C:/Users/username/Documents/GitHub/ch-ig/qa.html`)
+* Change `qa.html` to `index.html` and see your IG!
+
+
+# 4. Further links
+* [IG Publisher Documentation](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation)
+* [Using the FHIR Validator](https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Validator)
+* FHIR Chat [Zulip](chat.fhir.org)
+  * Create a free account
+  * Use different streams for help/information: #implementers, #IG creation, #committers/notification, #shorthand, #terminology, #switzerland, and more...
+* FHIR Shorthand
+  * [FSH School](https://fshschool.org/)
+  * [FHIR Shorthand IG](http://build.fhir.org/ig/HL7/fhir-shorthand/)
+  * [FHIR Shorthand Cheat Sheet](http://build.fhir.org/ig/HL7/fhir-shorthand/FSHQuickReference.pdf)
+  * [GitHub Repository from IG "mCode"](https://github.com/HL7/fhir-mCODE-ig) with SUSHI examples
