@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+	<id value="ExampleA"/>
+	<url value="http://fhir.ch/ig/ch-ig/ValueSet/ExampleA" />
+	<version value="0.1.0"/>
+	<name value="ExampleA"/>
+	<title value="ExampleA"/>
+	<status value="active"/>
+	<date value="2021-02-09"/>
+	<description value="Value Set Example1"/>
+	<compose>
+		<include>
+			<system value="http://fhir.ch/ig/ch-ig/CodeSystem/Example-Classification"/>
+			<filter>
+				<property value="concept"/>
+				<op value="is-a"/>
+				<value value="A"/>
+			</filter>
+		</include>
+	</compose>
+</ValueSet>

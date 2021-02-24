@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+	<id value="Example-Classification"/>
+	<url value="http://fhir.ch/ig/ch-ig/CodeSystem/Example-Classification" />
+	<version value="0.1.0"/>
+	<name value="ExampleClassification"/>
+	<title value="Example-Classification"/>
+	<status value="active"/>
+	<date value="2021-02-09"/>
+	<description value="Code System of the Example-Classification"/>
+	<caseSensitive value="false"/>
+	<hierarchyMeaning value="is-a"/>
+	<content value="complete"/>
+
+	<concept>
+		<code value="A"/>
+		<display value="Example A"/>
+		<definition value="Definition Example A"/>
+		<designation>
+			<language value="de"/>
+			<value value="Beispiel A"/>
+		</designation>
+		<designation>
+			<language value="fr"/>
+			<value value="Exemple A"/>
+		</designation>
+		<designation>
+			<language value="it"/>
+			<value value="Esempio A"/>
+		</designation>
+
+		<concept>
+			<code value="A.1"/>
+			<display value="Example A.1"/>
+			<definition value="Definition Example A.1"/>
+			<designation>
+				<language value="de"/>
+				<value value="Beispiel A.1"/>
+			</designation>
+			<designation>
+				<language value="fr"/>
+				<value value="Exemple A.1"/>
+			</designation>
+			<designation>
+				<language value="it"/>
+				<value value="Esempio A.1"/>
+			</designation>
+
+			<concept>
+				<code value="A.1.1"/>
+				<display value="Example A.1.1"/>
+				<definition value="Definition Example A.1.1"/>
+				<designation>
+					<language value="de"/>
+					<value value="Beispiel A.1.1"/>
+				</designation>
+				<designation>
+					<language value="fr"/>
+					<value value="Exemple A.1.1"/>
+				</designation>
+				<designation>
+					<language value="it"/>
+					<value value="Esempio A.1.1"/>
+				</designation>
+
+				<concept>
+					<code value="A.1.1.1"/>
+					<display value="Example A.1.1.1"/>
+					<definition value="Definition Example A.1.1.1"/>
+					<designation>
+						<language value="de"/>
+						<value value="Beispiel A.1.1.1"/>
+					</designation>
+					<designation>
+						<language value="fr"/>
+						<value value="Exemple A.1.1.1"/>
+					</designation>
+					<designation>
+						<language value="it"/>
+						<value value="Esempio A.1.1.1"/>
+					</designation>
+
+					<concept>
+						<code value="A.1.1.1.1"/>
+						<display value="Example A.1.1.1.1"/>
+						<definition value="Definition Example A.1.1.1.1"/>
+						<designation>
+							<language value="de"/>
+							<value value="Beispiel A.1.1.1.1"/>
+						</designation>
+						<designation>
+							<language value="fr"/>
+							<value value="Exemple A.1.1.1.1"/>
+						</designation>
+						<designation>
+							<language value="it"/>
+							<value value="Esempio A.1.1.1.1"/>
+						</designation>
+					</concept>
+
+					<concept>
+						<code value="A.1.1.1.2"/>
+						<display value="Example A.1.1.1.2"/>
+						<definition value="Definition Example A.1.1.1.2"/>
+						<designation>
+							<language value="de"/>
+							<value value="Beispiel A.1.1.1.2"/>
+						</designation>
+						<designation>
+							<language value="fr"/>
+							<value value="Exemple A.1.1.1.2"/>
+						</designation>
+						<designation>
+							<language value="it"/>
+							<value value="Esempio A.1.1.1.2"/>
+						</designation>
+					</concept>
+				</concept>
+			</concept>
+		</concept>
+	</concept>
+
+	<concept>
+		<code value="B"/>
+		<display value="Example B"/>
+		<definition value="Definition Example B"/>
+		<designation>
+			<language value="de"/>
+			<value value="Beispiel B"/>
+		</designation>
+		<designation>
+			<language value="fr"/>
+			<value value="Exemple B"/>
+		</designation>
+		<designation>
+			<language value="it"/>
+			<value value="Esempio B"/>
+		</designation>
+
+		<concept>
+			<code value="B.1"/>
+			<display value="Example B.1"/>
+			<definition value="Definition Example B.1"/>
+			<designation>
+				<language value="de"/>
+				<value value="Beispiel B.1"/>
+			</designation>
+			<designation>
+				<language value="fr"/>
+				<value value="Exemple B.1"/>
+			</designation>
+			<designation>
+				<language value="it"/>
+				<value value="Esempio B.1"/>
+			</designation>
+		</concept>
+
+		<concept>
+			<code value="B.2"/>
+			<display value="Example B.2"/>
+			<definition value="Definition Example B.2"/>
+			<designation>
+				<language value="de"/>
+				<value value="Beispiel B.2"/>
+			</designation>
+			<designation>
+				<language value="fr"/>
+				<value value="Exemple B.2"/>
+			</designation>
+			<designation>
+				<language value="it"/>
+				<value value="Esempio B.2"/>
+			</designation>
+
+			<concept>
+				<code value="B.2.1"/>
+				<display value="Example B.2.1"/>
+				<definition value="Definition Example B.2.1"/>
+				<designation>
+					<language value="de"/>
+					<value value="Beispiel B.2.1"/>
+				</designation>
+				<designation>
+					<language value="fr"/>
+					<value value="Exemple B.2.1"/>
+				</designation>
+				<designation>
+					<language value="it"/>
+					<value value="Esempio B.2.1"/>
+				</designation>
+
+				<concept>
+					<code value="B.2.1.1"/>
+					<display value="Example B.2.1.1"/>
+					<definition value="Definition Example B.2.1.1"/>
+					<designation>
+						<language value="de"/>
+						<value value="Beispiel B.2.1.1"/>
+					</designation>
+					<designation>
+						<language value="fr"/>
+						<value value="Exemple B.2.1.1"/>
+					</designation>
+					<designation>
+						<language value="it"/>
+						<value value="Esempio B.2.1.1"/>
+					</designation>
+				</concept>
+			</concept>
+		</concept>
+	</concept>
+
+</CodeSystem>

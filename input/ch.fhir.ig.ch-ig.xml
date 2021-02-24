@@ -52,6 +52,12 @@
       </reference>
       <exampleBoolean value="false"/>
     </resource>
+    <resource>
+      <reference>
+        <reference value="CodeSystem/Example-Classification"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
 
     <!-- References to structure definitions -->
     <resource>
@@ -71,6 +77,12 @@
     <resource>
       <reference>
         <reference value="ValueSet/ig-example"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/ExampleA"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
