@@ -48,7 +48,7 @@ For further information see [here](https://github.com/FHIR/auto-ig-builder#fhir-
 ## Publish the IG
 For further information see [here](https://github.com/ahdis/k8s-fhir.ch#publish-an-implementation-guide-ch-xyz-with-a-version-eg-010).
 
-
+***************************
 
 # Setup your computer to work with an implementation guide
 
