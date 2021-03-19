@@ -4,7 +4,7 @@
     <url value="http://fhir.ch/ig/ch-ig/StructureDefinition/ch-ig-patient"/>
     <version value="0.1.0"/>
     <name value="CHIGPatient"/>
-    <title value="CH IG Patient Profile"/>
+    <title value="CH IG Patient"/>
     <status value="draft"/>
     <date value="2018-10-15T00:00:00+10:00"/>
     <publisher value="HL7 Switzerland"/>
@@ -15,7 +15,7 @@
             <value value="https://www.hl7.ch/"/>
         </telecom>
     </contact>
-    <description value="IG patient definition is just an example!"/>
+    <description value="CH IG Patient profile is just an example!"/>
     <jurisdiction>
         <coding>
             <system value="urn:iso:std:iso:3166"/>

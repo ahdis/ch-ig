@@ -40,17 +40,17 @@
       <reference>
         <reference value="Patient/FranzMuster"/>
       </reference>
-      <name value="FranzMuster"/>
+      <name value="Franz Muster"/>
       <description value="Example for Patient"/>
       <exampleCanonical value="http://fhir.ch/ig/ch-ig/StructureDefinition/ch-ig-patient"/>
     </resource>
-
-    <!-- References to code systems -->
     <resource>
       <reference>
-        <reference value="CodeSystem/ig-example"/>
+        <reference value="Practitioner/HansMuster"/>
       </reference>
-      <exampleBoolean value="false"/>
+      <name value="Hans Muster"/>
+      <description value="Example for Practitioner"/>
+      <exampleCanonical value="http://fhir.ch/ig/ch-ig/StructureDefinition/ch-ig-practitioner"/>
     </resource>
 
     <!-- References to structure definitions -->
@@ -66,11 +66,25 @@
       </reference>
       <exampleBoolean value="false"/>
     </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/ch-ig-practitioner"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+
+    <!-- References to code systems -->
+    <resource>
+      <reference>
+        <reference value="CodeSystem/ch-ig-example"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
 
     <!-- References to value sets -->
     <resource>
       <reference>
-        <reference value="ValueSet/ig-example"/>
+        <reference value="ValueSet/ch-ig-example"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
