@@ -36,11 +36,6 @@
     <packageId value="ch.fhir.ig.ch-epr-term"/>
     <version value="2.0.4"/>
   </dependsOn>
-  <dependsOn id="chorf">
-    <uri value="http://fhir.ch/ig/ch-orf/ImplementationGuide/ch.fhir.ig.ch-orf"/>
-    <packageId value="ch.fhir.ig.ch-orf"/>
-    <version value="current"/>
-  </dependsOn>
   <definition>
     <!-- References to examples -->
     <resource>
@@ -59,14 +54,6 @@
       <description value="Example for Patient"/>
       <exampleCanonical value="http://fhir.ch/ig/ch-ig/StructureDefinition/ch-ig-patient"/>
     </resource>
-    <resource>
-      <reference>
-        <reference value="Practitioner/HansMuster"/>
-      </reference>
-      <name value="Hans Muster"/>
-      <description value="Example for Practitioner"/>
-      <exampleCanonical value="http://fhir.ch/ig/ch-ig/StructureDefinition/ch-ig-practitioner"/>
-    </resource>
 
     <!-- References to structure definitions -->
     <resource>
@@ -83,31 +70,19 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/ch-ig-practitioner"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="StructureDefinition/ch-orf-document"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/ch-rad-order-document"/>
+        <reference value="StructureDefinition/derived-composition"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/ch-rad-order-composition"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/ch-rad-order-servicerequest"/>
+        <reference value="StructureDefinition/slice-document"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
