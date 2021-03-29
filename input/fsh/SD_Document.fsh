@@ -28,4 +28,4 @@ Description: "Base definition for a document with the CH Core profiles."
 * entry contains TestComposition 1..1
 * entry[TestComposition] ^short = "Composition"
 * entry[TestComposition].resource 1..
-* entry[TestComposition].resource only http://fhir.ch/ig/ch-ig/StructureDefinition/derived-composition
+* entry[TestComposition].resource ^type.profile = Canonical(DerivedComposition)
