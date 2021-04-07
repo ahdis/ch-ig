@@ -3,13 +3,21 @@ This is a template for creating a [HL7 Switzerland](https://www.hl7.ch/) FHIR im
 
 To set up a FHIR Shorthand (FSH) only implementation guide, see the instructions [here](https://fshschool.org/docs/sushi/project/). For an example of a FSH only IG from [HL7 Switzerland](https://www.hl7.ch/), see the IG [CH RAD-Order](https://github.com/hl7ch/ch-rad-order). Don't forget to [install SUSHI](https://fshschool.org/docs/sushi/installation/).   
 Main differences for a FSH only IG:
-* You need a `sushi-config.yaml` file instead of the `ch.fhir.ig.ch-ig.xml` file (which is generated automatically)
+* You need a `sushi-config.yaml` file instead of the `ch.fhir.ig.ch-ig.xml` file (the xml will be generated automatically)
 * You need to change the `ig` parameter in the `ig.ini` file
 
 Further supporting information on FSH:
 * [Documentation of the FHIR Shorthand language standard](http://hl7.org/fhir/uv/shorthand/)
 * [FSH School](https://fshschool.org/): The place to learn and try FHIR Shorthand!
 * [FSH Cheat Sheet](http://build.fhir.org/ig/HL7/fhir-shorthand/FSHQuickReference.pdf)
+
+GoFSH:   
+Using [GoFSH](https://fshschool.org/docs/gofsh/), you can turn existing FHIR artifacts into FSH definitions.
+
+GoFSH is executed from the command line. GoFSH requires that these files be JSON. An example form of the GoFSH execution command is as follows:
+```
+gofsh ./input/resources/structuredefinition -o ./input/fsh -d ch.fhir.ig.ch-core@1.0.0 -d ch.fhir.ig.ch-epr-term@2.0.4 -d ihe.mhd.fhir@current
+```
 
 ## Creating your own repository from this template
 1. On GitHub, navigate to the main page of the repository.
@@ -76,6 +84,7 @@ For further information see [here](https://github.com/ahdis/k8s-fhir.ch#publish-
 * Create a GitHub account as described [here](https://git-scm.com/book/en/v2/GitHub-Account-Setup-and-Configuration)
 * You should definitely set up two-factor authentication as it is described there in the lowest section
 
+***************************
 
 # Get the implementation guide running 
 ## Get the existing git repository
@@ -96,6 +105,7 @@ For further information see [here](https://github.com/ahdis/k8s-fhir.ch#publish-
 * Copy the link from the result in your terminal in a web browser (`file:///C:/Users/username/Documents/GitHub/ch-ig/qa.html`)
 * Change `qa.html` to `index.html` and see your IG!
 
+***************************
 
 # Further links
 * [IG Publisher Documentation](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation)
