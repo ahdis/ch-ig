@@ -14,7 +14,7 @@
             <value value="https://www.hl7.ch/"/>
         </telecom>
     </contact>
-    <description value="CH IG Example value set is just en example!" />
+    <description value="CH IG Example value set is just an example!" />
     <jurisdiction>
         <coding>
             <system value="urn:iso:std:iso:3166"/>
