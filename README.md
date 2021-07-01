@@ -1,7 +1,7 @@
 # Template for HL7 Switzerland FHIR Implementation Guide
 This is a template for creating a [HL7 Switzerland](https://www.hl7.ch/) FHIR implementation guide ([CI Build](http://build.fhir.org/ig/ahdis/ch-ig/branches/master/index.html)). Sample resources are integrated as xml files (`ch-ig\input\resources` and `ch-ig\input\examples`). fsh files are also integrated (`ch-ig\input\fsh`).   
 
-**FSH notes:**    
+**FSH only:**    
 To set up a FHIR Shorthand (FSH) only implementation guide, see the instructions [here](https://fshschool.org/docs/sushi/project/). For an example of a FSH only IG from [HL7 Switzerland](https://www.hl7.ch/), see the IG [CH RAD-Order](https://github.com/hl7ch/ch-rad-order). Don't forget to [install SUSHI](https://fshschool.org/docs/sushi/installation/).   
 Main differences for a FSH only IG:
 * You need a `sushi-config.yaml` file instead of the `ch.fhir.ig.ch-ig.xml` file (the xml will be generated automatically)
@@ -12,7 +12,7 @@ Further supporting information on FSH:
 * [FSH School](https://fshschool.org/): The place to learn and try FHIR Shorthand!
 * [FSH Cheat Sheet](http://build.fhir.org/ig/HL7/fhir-shorthand/FSHQuickReference.pdf)
 
-GoFSH:   
+**GoFSH:**      
 Using [GoFSH](https://fshschool.org/docs/gofsh/), you can turn existing FHIR artifacts into FSH definitions.
 
 GoFSH is executed from the command line. GoFSH requires that these files be JSON. An example form of the GoFSH execution command is as follows:
