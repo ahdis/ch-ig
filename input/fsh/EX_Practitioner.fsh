@@ -1,5 +1,5 @@
 Instance: HansMuster
-InstanceOf: Practitioner
+InstanceOf: SDChIgPractitioner
 Title: "Hans Muster"
 Description: "Example for Practitioner"
 * name.family = "Muster"
