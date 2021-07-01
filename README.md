@@ -2,10 +2,10 @@
 This is a template for creating a [HL7 Switzerland](https://www.hl7.ch/) FHIR implementation guide ([CI Build](http://build.fhir.org/ig/ahdis/ch-ig/branches/master/index.html)). Sample resources are integrated as xml files (`ch-ig\input\resources` and `ch-ig\input\examples`). fsh files are also integrated (`ch-ig\input\fsh`).   
 
 **FSH only:**    
-To set up a FHIR Shorthand (FSH) only implementation guide, see the instructions [here](https://fshschool.org/docs/sushi/project/). For an example of a FSH only IG from [HL7 Switzerland](https://www.hl7.ch/), see the IG [CH RAD-Order](https://github.com/hl7ch/ch-rad-order). Don't forget to [install SUSHI](https://fshschool.org/docs/sushi/installation/).   
+To set up a FHIR Shorthand (FSH) only implementation guide use the branch [`fsh-only-ig`](https://github.com/ahdis/ch-ig/tree/fsh-only-ig) of this repository or see the instructions [here](https://fshschool.org/docs/sushi/project/). Don't forget to [install SUSHI](https://fshschool.org/docs/sushi/installation/).   
 Main differences for a FSH only IG:
-* You need a `sushi-config.yaml` file instead of the `ch.fhir.ig.ch-ig.xml` file (the xml will be generated automatically)
-* You need to change the `ig` parameter in the `ig.ini` file
+* You need a `sushi-config.yaml` file instead of the `ch.fhir.ig.ch-ig.xml` file (the control file will be generated automatically), see [here](https://github.com/ahdis/ch-ig/blob/fsh-only-ig/sushi-config.yaml)
+* You need to change the `ig` parameter in the `ig.ini` file, see [here](https://github.com/ahdis/ch-ig/blob/fsh-only-ig/ig.ini)
 
 Further supporting information on FSH:
 * [Documentation of the FHIR Shorthand language standard](http://hl7.org/fhir/uv/shorthand/)
@@ -26,10 +26,10 @@ gofsh ./input/resources/structuredefinition -o ./input/fsh -d ch.fhir.ig.ch-core
 3. Use the **Owner** drop-down menu, and select the account you want to own the repository. 
 4. Type a name for your repository, and an optional description. 
 5. Choose to make the repository either public or private.
-6. Optionally, if the personal account or organization in which you're creating uses any GitHub Apps from GitHub Marketplace, select any apps you'd like to use in the repository.
+6. Optionally, if you want to set up a fish-only implementation guide, select **Include all branches**.
 7. Click **Create repository from template**.
 
-See also https://help.github.com/en/articles/creating-a-repository-from-a-template
+See also https://help.github.com/en/articles/creating-a-repository-from-a-template.
 
 ## Adapt the template to your own implementation guide
 * Replace **ig** (e.g. *ch-**ig**-patient* &rarr; *ch-**name**-patient*) at all appropriate places with the desired **name** of the implementation guide:  
