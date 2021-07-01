@@ -2,7 +2,7 @@
     <id value="ch-ig-example"/>
     <url value="http://fhir.ch/ig/ch-ig/ValueSet/ch-ig-example"/>
     <version value="0.1.0"/>
-    <name value="CHIGExample"/>
+    <name value="VSChIgExample"/>
     <title value="CH IG Example"/>
     <status value="draft"/>
     <date value="2020-01-14"/>
