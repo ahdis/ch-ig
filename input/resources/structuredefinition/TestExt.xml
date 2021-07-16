@@ -1,0 +1,36 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+    <id value="TestExt" />
+    <url value="http://epa-cc.de/fhir/StructureDefinition/TestExt" />
+    <version value="1.0.0" />
+    <name value="TestExt" />
+    <title value="Only Extension - working"/>
+    <status value="active" />
+    <description value="working"/>
+    <fhirVersion value="4.0.1" />
+    <kind value="resource" />
+    <abstract value="false" />
+    <type value="Observation" />
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation" />
+    <derivation value="constraint" />
+    <differential>
+        <element id="Observation">
+            <path value="Observation" />
+        </element>
+        <element id="Observation.valueCodeableConcept">
+            <path value="Observation.valueCodeableConcept" />
+            <min value="1" />
+        </element>
+        <element id="Observation.valueCodeableConcept.coding">
+            <path value="Observation.valueCodeableConcept.coding" />
+            <min value="1" />
+        </element>
+        <element id="Observation.valueCodeableConcept.coding.extension:ordinalValue">
+            <path value="Observation.valueCodeableConcept.coding.extension" />
+            <sliceName value="ordinalValue" />
+            <type>
+                <code value="Extension" />
+                <profile value="http://hl7.org/fhir/StructureDefinition/ordinalValue" />
+            </type>
+        </element>
+    </differential>
+</StructureDefinition>

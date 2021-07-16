@@ -1,0 +1,28 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+    <id value="TestAmpNumeric" />
+    <url value="http://epa-cc.de/fhir/StructureDefinition/TestAmpNumeric" />
+    <version value="1.0.0" />
+    <name value="TestAmpNumeric" />
+    <title value="Only ampersand (&#38; numeric) - working"/>
+    <status value="active" />
+    <description value="working"/>
+    <fhirVersion value="4.0.1" />
+    <kind value="resource" />
+    <abstract value="false" />
+    <type value="Observation" />
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation" />
+    <derivation value="constraint" />
+    <differential>
+        <element id="Observation">
+            <path value="Observation" />
+        </element>
+        <element id="Observation.valueCodeableConcept">
+            <path value="Observation.valueCodeableConcept" />
+            <min value="1" />
+        </element>
+        <element id="Observation.valueCodeableConcept.coding">
+            <path value="Observation.valueCodeableConcept.coding" />
+            <min value="1" />
+        </element>
+    </differential>
+</StructureDefinition>

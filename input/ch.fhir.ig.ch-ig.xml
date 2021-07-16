@@ -35,48 +35,46 @@
     <!-- References to examples -->
     <resource>
       <reference>
-        <reference value="Composition/Zuweisung"/>
-      </reference>
-      <name value="Zuweisung"/>
-      <description value="Example for Composition"/>
-      <exampleCanonical value="http://fhir.ch/ig/ch-ig/StructureDefinition/ch-ig-composition"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="Patient/FranzMuster"/>
       </reference>
       <name value="Franz Muster"/>
       <description value="Example for Patient"/>
-      <exampleCanonical value="http://fhir.ch/ig/ch-ig/StructureDefinition/ch-ig-patient"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Practitioner/HansMuster"/>
-      </reference>
-      <name value="Hans Muster"/>
-      <description value="Example for Practitioner"/>
-      <exampleCanonical value="http://fhir.ch/ig/ch-ig/StructureDefinition/ch-ig-practitioner"/>
+      <!--<exampleCanonical value="http://fhir.ch/ig/ch-ig/StructureDefinition/ch-ig-patient"/>-->
     </resource>
 
     <!-- References to structure definitions -->
+
     <resource>
       <reference>
-        <reference value="StructureDefinition/ch-ig-composition"/>
+        <reference value="StructureDefinition/TestAmpNamed"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/ch-ig-patient"/>
+        <reference value="StructureDefinition/TestAmpNumeric"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/ch-ig-practitioner"/>
+        <reference value="StructureDefinition/TestExt"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/TestExtAmpNamed"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/TestExtAmpNumeric"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+
 
     <!-- References to code systems -->
     <resource>
