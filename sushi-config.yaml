@@ -1,0 +1,42 @@
+# Example/Documentation for this file
+# https://fshschool.org/docs/sushi/configuration/#exhaustive-example
+
+id: ch.fhir.ig.ch-ig
+canonical: http://fhir.ch/ig/ch-ig
+name: CH_IG
+title: "CH IG (R4)"
+description: Implementation Guide CH IG (R4) for ...
+status: draft
+license: CC-BY-SA-4.0
+copyright: CC-BY-SA-4.0
+jurisdiction: urn:iso:std:iso:3166#CH
+date: 2021-12-03
+version: 0.1.0
+fhirVersion: 4.0.1
+copyrightYear: 2021+
+releaseLabel: CI build
+publisher:
+  name: HL7 Switzerland
+contact:
+  name: HL7 Switzerland
+  telecom:
+    system: url
+    value: https://www.hl7.ch/
+
+dependencies:
+  ch.fhir.ig.ch-core: 2.0.0
+
+pages:
+  index.md:
+    title: Home
+  profiles.md:
+    title: Profiles
+  extensions.md:
+    title: Extensions
+  terminology.md:
+    title: Terminology
+
+resources:
+  CodeSystem/ch-ig-example-translation:
+    name: CH IG Example Translation
+    exampleBoolean: false

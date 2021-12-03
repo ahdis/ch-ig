@@ -1,12 +1,9 @@
 # Template for HL7 Switzerland FHIR Implementation Guide
-This is a template for creating a [HL7 Switzerland](https://www.hl7.ch/) FHIR implementation guide ([CI Build](http://build.fhir.org/ig/ahdis/ch-ig/branches/master/index.html)). Sample resources are integrated as xml files (`ch-ig\input\resources` and `ch-ig\input\examples`). fsh files are also integrated (`ch-ig\input\fsh`).   
+This is a template for creating a [HL7 Switzerland](https://www.hl7.ch/) FHIR implementation guide ([CI Build](http://build.fhir.org/ig/ahdis/ch-ig/branches/master/index.html)). Sample resources are integrated as fsh files (`ch-ig\input\fsh`).   
 This *CH IG* implementation guide is dependent on CH Core (and therefore also on CH EPR Term), which describe the Swiss specific context, especially related to the Swiss electronic patient record. If this dependency cannot be used, it can be removed.
 
-**FSH only:**    
-To set up a FHIR Shorthand (FSH) only implementation guide use the branch [`fsh-only-ig`](https://github.com/ahdis/ch-ig/tree/fsh-only-ig) of this repository or see the instructions [here](https://fshschool.org/docs/sushi/project/). Don't forget to [install SUSHI](https://fshschool.org/docs/sushi/installation/). ([CI Build](http://build.fhir.org/ig/ahdis/ch-ig/branches/fsh-only-ig/index.html))  
-Main differences for a FSH only IG:
-* You need a `sushi-config.yaml` file instead of the `ch.fhir.ig.ch-ig.xml` file (the control file will be generated automatically), see [here](https://github.com/ahdis/ch-ig/blob/fsh-only-ig/sushi-config.yaml).
-* You need to change the `ig` parameter in the `ig.ini` file, see [here](https://github.com/ahdis/ch-ig/blob/fsh-only-ig/ig.ini).
+**FSH (FHIR Shorthand)**    
+To set up a FHIR Shorthand (FSH) implementation guide use this template or see the instructions [here](https://fshschool.org/docs/sushi/project/). Don't forget to [install SUSHI](https://fshschool.org/docs/sushi/installation/). ([CI Build](http://build.fhir.org/ig/ahdis/ch-ig/branches/master/index.html))  
 
 Further supporting information on FSH:
 * [Documentation of the FHIR Shorthand language standard](http://hl7.org/fhir/uv/shorthand/)
