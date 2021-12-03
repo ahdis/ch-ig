@@ -1,6 +1,8 @@
-# Example/Documentation for this file
+# Example/Documentation for the IG YML file
 # https://fshschool.org/docs/sushi/configuration/#exhaustive-example
 
+# Package name
+# https://confluence.hl7.org/display/FHIR/NPM+Package+Specification#NPMPackageSpecification-Packagename
 id: ch.fhir.ig.ch-ig
 canonical: http://fhir.ch/ig/ch-ig
 name: CH_IG
@@ -9,12 +11,13 @@ description: Implementation Guide CH IG (R4) for ...
 status: draft
 license: CC-BY-SA-4.0
 copyright: CC-BY-SA-4.0
-jurisdiction: urn:iso:std:iso:3166#CH
+jurisdiction: urn:iso:std:iso:3166#CHE
 date: 2021-12-03
 version: 0.1.0
 fhirVersion: 4.0.1
 copyrightYear: 2021+
-releaseLabel: CI build
+# https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters -> Parameter: releaselabel
+releaseLabel: CI Build 
 publisher:
   name: HL7 Switzerland
 contact:
@@ -35,6 +38,9 @@ pages:
     title: Extensions
   terminology.md:
     title: Terminology
+
+# Parameters
+# https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
 
 resources:
   CodeSystem/ch-ig-example-translation:
