@@ -13,6 +13,7 @@ Further supporting information on FSH:
 * [FSH School](https://fshschool.org/): The place to learn and try FHIR Shorthand!
 * [FSH Cheat Sheet](http://build.fhir.org/ig/HL7/fhir-shorthand/FSHQuickReference.pdf)
 
+
 **GoFSH:**      
 Using [GoFSH](https://fshschool.org/docs/gofsh/), you can turn existing FHIR artifacts into FSH definitions.
 
