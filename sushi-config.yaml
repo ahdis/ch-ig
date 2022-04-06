@@ -39,6 +39,13 @@ pages:
   terminology.md:
     title: Terminology
 
+menu:
+  Home: index.html
+  Profiles: profiles.html
+  Extensions: extensions.html
+  Terminology: terminology.html
+  Artifacts: artifacts.html
+
 # Parameters
 # https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
 
