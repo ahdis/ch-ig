@@ -12,7 +12,7 @@ status: draft
 license: CC-BY-SA-4.0
 copyright: CC-BY-SA-4.0
 jurisdiction: urn:iso:std:iso:3166#CHE
-date: 2021-12-03
+date: 2022-11-22
 version: 0.1.0
 fhirVersion: 4.0.1
 copyrightYear: 2021+
@@ -27,7 +27,7 @@ contact:
     value: https://www.hl7.ch/
 
 dependencies:
-  ch.fhir.ig.ch-core: 2.0.0
+  ch.fhir.ig.ch-core: 2.1.0
 
 pages:
   index.md:
@@ -47,7 +47,10 @@ menu:
   Artifacts: artifacts.html
 
 # Parameters
-# https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
+# Core FHIR: http://build.fhir.org/codesystem-guide-parameter-code.html
+# FHIR Tools IG: http://build.fhir.org/ig/FHIR/fhir-tools-ig/branches/master/CodeSystem-ig-parameters.html
+parameter:
+  allow-extensible-warnings: true
 
 resources:
   CodeSystem/ch-ig-example-translation:

@@ -4,6 +4,7 @@
     <name value="ChIgExampleTranslation"/>
     <title value="CH IG Example Translation"/>
     <status value="active"/>
+	<experimental value="false"/>
     <description value="CH IG Example Translation code system is just an example with translated values!" />
     <caseSensitive value="true"/>
     <valueSet value="http://fhir.ch/ig/ch-ig/ValueSet/ch-ig-example-translation"/>
