@@ -27,7 +27,8 @@ contact:
     value: https://www.hl7.ch/
 
 dependencies:
-  ch.fhir.ig.ch-core: 2.1.0
+  ch.fhir.ig.ch-core: current
+  ch.fhir.ig.ch-emed: current
 
 pages:
   index.md:
@@ -56,3 +57,11 @@ resources:
   CodeSystem/ch-ig-example-translation:
     name: CH IG Example Translation
     exampleBoolean: false
+  Bundle/MTP:
+    name: MTP
+    description: Test file
+    exampleCanonical: http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-document-medicationtreatmentplan
+  Bundle/PADV:
+    name: PADV
+    description: Test file
+    exampleCanonical: http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-document-pharmaceuticaladvice 

@@ -1,0 +1,428 @@
+{
+	"resourceType": "Bundle",
+	"id": "PADV",
+	"identifier": {
+		"system": "urn:ietf:rfc:3986",
+		"value": "urn:uuid:adab8d2d-ae14-48d6-8d15-b726d6ea82c5"
+	},
+	"type": "document",
+	"timestamp": "2012-02-04T14:00:00+01:00",
+	"entry": [
+		{
+			"fullUrl": "http://test.fhir.ch/r4/Composition/PharmaceuticalAdvice-ChangeDosage",
+			"resource": {
+				"resourceType": "Composition",
+				"id": "PharmaceuticalAdvice-ChangeDosage",
+				"language": "de-CH",
+				"extension": [
+					{
+						"url": "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-informationrecipient",
+						"valueReference": {
+							"reference": "Patient/MonikaWegmuellerRecipient"
+						}
+					}
+				],
+				"identifier": {
+					"system": "urn:ietf:rfc:3986",
+					"value": "urn:uuid:adab8d2d-ae14-48d6-8d15-b726d6ea82c5"
+				},
+				"status": "final",
+				"type": {
+					"coding": [
+						{
+							"system": "http://loinc.org",
+							"code": "61356-2",
+							"display": "Medication pharmaceutical advice.extended Document"
+						},
+						{
+							"system": "http://snomed.info/sct",
+							"code": "419891008",
+							"display": "Record artifact (record artifact)"
+						}
+					]
+				},
+				"subject": {
+					"reference": "Patient/MonikaWegmueller"
+				},
+				"date": "2012-02-04T14:00:00+01:00",
+				"author": [
+					{
+						"reference": "PractitionerRole/FamilienHausarztAtHausarzt"
+					}
+				],
+				"title": "Kommentar zur Medikation",
+				"_confidentiality": {
+					"extension": [
+						{
+							"url": "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-confidentialitycode",
+							"valueCodeableConcept": {
+								"coding": [
+									{
+										"system": "http://snomed.info/sct",
+										"code": "17621005",
+										"display": "Normal (qualifier value)"
+									}
+								]
+							}
+						}
+					]
+				},
+				"confidentiality": "N",
+				"section": [
+					{
+						"title": "Hinweise zur Medikation",
+						"code": {
+							"coding": [
+								{
+									"system": "http://loinc.org",
+									"code": "61357-0",
+									"display": "Medication pharmaceutical advice.brief Document"
+								}
+							]
+						},
+						"text": {
+							"status": "generated",
+							"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><thead><tr><th>Präpartename</th><th>Wirkstoffname</th><th>Galenische Form</th><th>Dosis pro Einheit</th><th>Dos.Morgen</th><th>Dos.Mittag</th><th>Dos.Abend</th><th>Dos.Nacht</th><th>Verabreichungsweg</th><th>Anwendungsdauer</th><th>Behandlungsgrund</th><th>Kommentar</th></tr></thead><tbody><tr id=\"padv.1\"><td id=\"padv.1.brandedmedication\">Triatec</td><td id=\"padv.1.ingredient\">Ramipril</td><td id=\"padv.1.packageform\">Tbl</td><td id=\"padv.1.dosequantity\">2.5 mg</td><td id=\"padv.1.dosagemorning\">1</td><td id=\"padv.1.dosagelunch\">0</td><td id=\"padv.1.dosageevening\">0</td><td id=\"padv.1.dosagenight\">0</td><td id=\"padv.1.routecode\">oral</td><td id=\"padv.1.datefromto\"/><td id=\"padv.1.reason\">Bluthochdruck</td><td id=\"padv.1.note\">Dosierungsänderung: Morgens 1 Tablette anstatt 0.5 Tablette</td></tr></tbody></table></div>"
+						},
+						"entry": [
+							{
+								"reference": "Observation/PharmaceuticalAdvice-DosageChange"
+							}
+						]
+					}
+				]
+			}
+		},
+		{
+			"fullUrl": "http://test.fhir.ch/r4/Patient/MonikaWegmueller",
+			"resource": {
+				"resourceType": "Patient",
+				"id": "MonikaWegmueller",
+				"identifier": [
+					{
+						"type": {
+							"coding": [
+								{
+									"system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+									"code": "MR"
+								}
+							]
+						},
+						"system": "urn:oid:2.999.1",
+						"value": "11111111"
+					}
+				],
+				"name": [
+					{
+						"family": "Wegmüller",
+						"given": [
+							"Monika"
+						]
+					}
+				],
+				"gender": "female",
+				"birthDate": "1943-05-15",
+				"address": [
+					{
+						"line": [
+							"Wiesenstr. 12"
+						],
+						"city": "Zürich",
+						"postalCode": "8003",
+						"country": "CH"
+					}
+				]
+			}
+		},
+		{
+			"fullUrl": "http://test.fhir.ch/r4/PractitionerRole/FamilienHausarztAtHausarzt",
+			"resource": {
+				"resourceType": "PractitionerRole",
+				"id": "FamilienHausarztAtHausarzt",
+				"practitioner": {
+					"reference": "Practitioner/FamilienHausarzt"
+				},
+				"organization": {
+					"reference": "Organization/Hausarzt"
+				}
+			}
+		},
+		{
+			"fullUrl": "http://test.fhir.ch/r4/Practitioner/FamilienHausarzt",
+			"resource": {
+				"resourceType": "Practitioner",
+				"id": "FamilienHausarzt",
+				"identifier": [
+					{
+						"system": "urn:oid:2.51.1.3",
+						"value": "7601000234438"
+					}
+				],
+				"name": [
+					{
+						"family": "Hausarzt",
+						"given": [
+							"Familien"
+						]
+					}
+				]
+			}
+		},
+		{
+			"fullUrl": "http://test.fhir.ch/r4/Organization/Hausarzt",
+			"resource": {
+				"resourceType": "Organization",
+				"id": "Hausarzt",
+				"identifier": [
+					{
+						"system": "urn:oid:2.51.1.3",
+						"value": "7601000234438"
+					}
+				],
+				"name": "Hausarzt",
+				"address": [
+					{
+						"line": [
+							"Krankenstrasse 2"
+						],
+						"city": "Zürich",
+						"postalCode": "8005",
+						"country": "CH"
+					}
+				]
+			}
+		},
+		{
+			"fullUrl": "http://test.fhir.ch/r4/Patient/MonikaWegmuellerRecipient",
+			"resource": {
+				"resourceType": "Patient",
+				"id": "MonikaWegmuellerRecipient",
+				"name": [
+					{
+						"family": "Wegmüller",
+						"given": [
+							"Monika"
+						]
+					}
+				],
+				"address": [
+					{
+						"line": [
+							"Wiesenstr. 12"
+						],
+						"city": "Zürich",
+						"postalCode": "8003",
+						"country": "CH"
+					}
+				]
+			}
+		},
+		{
+			"fullUrl": "http://test.fhir.ch/r4/Observation/PharmaceuticalAdvice-DosageChange",
+			"resource": {
+				"resourceType": "Observation",
+				"id": "PharmaceuticalAdvice-DosageChange",
+				"extension": [
+					{
+						"extension": [
+							{
+								"url": "id",
+								"valueIdentifier": {
+									"system": "urn:ietf:rfc:3986",
+									"value": "urn:uuid:c9f758a1-296c-4710-84d4-e181db8c7478"
+								}
+							},
+							{
+								"url": "externalDocumentId",
+								"valueIdentifier": {
+									"system": "urn:ietf:rfc:3986",
+									"value": "urn:uuid:c9f758a1-296c-4710-84d4-e181db8c7478"
+								}
+							}
+						],
+						"url": "http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-treatmentplan"
+					},
+					{
+						"url": "http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-ext-medicationstatement-changed",
+						"valueReference": {
+							"reference": "MedicationStatement/MedStatTriatec-ChangeDosage"
+						}
+					}
+				],
+				"identifier": [
+					{
+						"system": "urn:ietf:rfc:3986",
+						"value": "urn:uuid:adab8d2d-ae14-48d6-8d15-b726d6ea82c5"
+					}
+				],
+				"status": "final",
+				"code": {
+					"coding": [
+						{
+							"system": "urn:oid:1.3.6.1.4.1.19376.1.9.2.1",
+							"code": "CHANGE"
+						}
+					]
+				},
+				"subject": {
+					"reference": "Patient/MonikaWegmueller"
+				},
+				"effectiveDateTime": "2012-02-04T14:00:00+01:00",
+				"note": [
+					{
+						"text": "Dosierungsänderung: Morgens 1 Tablette anstatt 0.5 Tablette"
+					}
+				]
+			}
+		},
+		{
+			"fullUrl": "http://test.fhir.ch/r4/MedicationStatement/MedStatTriatec-ChangeDosage",
+			"resource": {
+				"resourceType": "MedicationStatement",
+				"id": "MedStatTriatec-ChangeDosage",
+				"contained": [
+					{
+						"resourceType": "Medication",
+						"id": "med",
+						"code": {
+							"extension": [
+								{
+									"url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+									"valueUrl": "#padv.1"
+								}
+							],
+							"coding": [
+								{
+									"system": "urn:oid:2.51.1.1",
+									"code": "7680538751228",
+									"display": "TRIATEC Tabl 2.5 mg 20 Stk"
+								}
+							],
+							"text": "TRIATEC Tabl 2.5 mg"
+						},
+						"form": {
+							"coding": [
+								{
+									"system": "urn:oid:0.4.0.127.0.16.1.1.2.1",
+									"code": "10219000",
+									"display": "Tablet"
+								}
+							]
+						},
+						"amount": {
+							"numerator": {
+								"value": 20,
+								"unit": "Tablet (unit of presentation)",
+								"system": "http://snomed.info/sct",
+								"code": "732936001"
+							},
+							"denominator": {
+								"value": 1,
+								"unit": "Package",
+								"system": "http://unitsofmeasure.org",
+								"code": "{Package}"
+							}
+						},
+						"ingredient": [
+							{
+								"itemCodeableConcept": {
+									"coding": [
+										{
+											"system": "http://snomed.info/sct",
+											"code": "386872004",
+											"display": "Ramipril (substance)"
+										}
+									],
+									"text": "Ramipril"
+								},
+								"strength": {
+									"numerator": {
+										"value": 2.5,
+										"unit": "milligram",
+										"system": "http://unitsofmeasure.org",
+										"code": "mg"
+									},
+									"denominator": {
+										"value": 1,
+										"unit": "Tablet (unit of presentation)",
+										"system": "http://snomed.info/sct",
+										"code": "732936001"
+									}
+								}
+							}
+						]
+					}
+				],
+				"extension": [
+					{
+						"url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+						"valueUrl": "#padv.1"
+					}
+				],
+				"identifier": [
+					{
+						"system": "urn:ietf:rfc:3986",
+						"value": "urn:uuid:adab8d2d-ae14-48d6-8d15-b726d6ea82c5"
+					}
+				],
+				"partOf": [
+					{
+						"reference": "Observation/PharmaceuticalAdvice-DosageChange"
+					}
+				],
+				"status": "active",
+				"medicationReference": {
+					"reference": "#med"
+				},
+				"subject": {
+					"reference": "Patient/MonikaWegmueller"
+				},
+				"reasonCode": [
+					{
+						"extension": [
+							{
+								"url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+								"valueUrl": "#padv.1.reason"
+							}
+						],
+						"text": "Bluthochdruck"
+					}
+				],
+				"dosage": [
+					{
+						"patientInstruction": "-",
+						"timing": {
+							"repeat": {
+								"boundsPeriod": {
+									"start": "2011-11-29"
+								},
+								"when": [
+									"MORN"
+								]
+							}
+						},
+						"route": {
+							"coding": [
+								{
+									"system": "urn:oid:0.4.0.127.0.16.1.1.2.1",
+									"code": "20053000",
+									"display": "Oral use"
+								}
+							]
+						},
+						"doseAndRate": [
+							{
+								"doseQuantity": {
+									"value": 1,
+									"unit": "Tablet (unit of presentation)",
+									"system": "http://snomed.info/sct",
+									"code": "732936001"
+								}
+							}
+						]
+					}
+				]
+			}
+		}
+	]
+}
