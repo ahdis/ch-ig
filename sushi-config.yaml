@@ -56,3 +56,5 @@ resources:
   CodeSystem/ch-ig-example-translation:
     name: CH IG Example Translation
     exampleBoolean: false
+  RiskAssessment/breastcancer-risk:
+    exampleBoolean: true  
