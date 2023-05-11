@@ -62,3 +62,7 @@ resources:
   CodeSystem/ch-ig-example-translation:
     name: CH IG Example Translation
     exampleBoolean: false
+  CodeSystem/ch-ig-auto-translation:
+    name: CH IG Auto Translation
+    exampleBoolean: false
+      

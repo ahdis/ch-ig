@@ -1,0 +1,34 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="ch-ig-auto-translation"/>
+    <url value="http://fhir.ch/ig/ch-ig/CodeSystem/ch-ig-auto-translation" />
+    <name value="ChIgAutoTranslation"/>
+    <title value="CH IG Auto Translation"/>
+    <status value="active"/>
+	<experimental value="false"/>
+    <description value="CH IG Auto Translation" />
+    <caseSensitive value="true"/>
+    <content value="complete"/>
+    
+    <concept>
+      <code value="123"/>
+      <display value="123 default language (en)"/>
+    </concept>
+
+    <concept>
+      <code value="987"/>
+      <display value="987 default language (en)"/>
+      <designation>
+        <language value="de-CH"/>
+        <value value="987 de-CH"/>
+      </designation>
+      <designation>
+        <language value="fr-CH"/>
+        <value value="987 fr-CH"/>
+      </designation>
+      <designation>
+        <language value="it-CH"/>
+        <value value="987 it-CH"/>
+      </designation>
+    </concept>
+
+</CodeSystem>

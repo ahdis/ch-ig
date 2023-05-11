@@ -109,8 +109,8 @@ For further information see [here](https://github.com/ahdis/k8s-fhir.ch#publish-
 
 ***************************
 
-# Multi language IG
-* Zulip topic: [IG creation > Multi-language IGs](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Multi-language.20IGs)
+# Multi-lingual IG
+* Zulip stream: [#Multi-lingual IGs](https://chat.fhir.org/#narrow/stream/380308-Multi-lingual-IGs)
 
 ## Steps
 1. Add parameters to `sushi-config.yaml`
@@ -127,11 +127,13 @@ For further information see [here](https://github.com/ahdis/k8s-fhir.ch#publish-
    ```
 
 2. Add a folder `translations` to the `input` folder (currently manually)
-3. Run IG publisher
-4. Go to `temp/lang/po or xliff or json`
-5. Fill in the translations
-6. Copy the file and paste it into the folder `input/translations`
-7. Run IG publisher again
+3. Create an empty file with the name {type}-{id}.po in the `translations` folder where type and id identify the base resource you are translating
+4. Run IG publisher
+5. Take the output translation file (`temp/lang`) in the syntax of your choice (po, xliff, json) - it will have all the things needing translation in it (with any existing translations preserved)
+6. Add translations to it manually or using your preferred translation software
+7. Put the updated file in the folder `input/translations` and delete any other file for that resource
+8. Build the IG again
+9. Repeat until happiness is achieved...
 
 ***************************
 # Further links
