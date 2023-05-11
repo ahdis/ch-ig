@@ -116,16 +116,22 @@ For further information see [here](https://github.com/ahdis/k8s-fhir.ch#publish-
 1. Add parameters to `sushi-config.yaml`
    ``` txt
    parameters:
+     i18n-default-lang:
+       - en
      i18n-lang: 
-       - de
+       - de-CH
+       - fr-CH
+       - it-CH
+       - rm-CH
      translation-supplements: input/translations
    ```
 
-2. Run IG publisher
-3. Go to `temp/lang/{file}.po/xliff/json`
-4. Fill in the translations
-5. Copy the file and paste it into the folder `input/translations`
-6. Run IG publisher again
+2. Add a folder `translations` to the `input` folder (currently manually)
+3. Run IG publisher
+4. Go to `temp/lang/po or xliff or json`
+5. Fill in the translations
+6. Copy the file and paste it into the folder `input/translations`
+7. Run IG publisher again
 
 ***************************
 # Further links

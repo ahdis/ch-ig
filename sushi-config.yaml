@@ -51,8 +51,11 @@ menu:
 # FHIR Tools IG: http://build.fhir.org/ig/FHIR/fhir-tools-ig/branches/master/CodeSystem-ig-parameters.html
 parameters:
   allow-extensible-warnings: true
+  i18n-default-lang:
+    - en
   i18n-lang: # A language to translate the IG into.
-    - de
+    - de-CH
+    - fr-CH
   translation-supplements: input/translations # A folder in which to look for translation supplements - .po or .xliff or .json
 
 resources:
