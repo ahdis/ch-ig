@@ -109,6 +109,24 @@ For further information see [here](https://github.com/ahdis/k8s-fhir.ch#publish-
 
 ***************************
 
+# Multi language IG
+* Zulip topic: [IG creation > Multi-language IGs](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Multi-language.20IGs)
+
+## Steps
+1. Add parameters to sushi-config.yaml
+   ``` txt
+   parameter:
+     i18n-lang: 
+       - de
+     translation-supplements: input/translations
+   ```
+
+2. Run IG publisher
+3. Go to temp/lang/<file>.po/xliff/json
+4. Fill in the translations
+5. Copy the file and paste it into the folder input/translations
+
+***************************
 # Further links
 * [IG Publisher Documentation](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation)
 * [Using the FHIR Validator](https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Validator)
