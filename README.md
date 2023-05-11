@@ -125,6 +125,7 @@ For further information see [here](https://github.com/ahdis/k8s-fhir.ch#publish-
 3. Go to temp/lang/<file>.po/xliff/json
 4. Fill in the translations
 5. Copy the file and paste it into the folder input/translations
+6. Run IG publisher again
 
 ***************************
 # Further links
