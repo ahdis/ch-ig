@@ -111,6 +111,7 @@ For further information see [here](https://github.com/ahdis/k8s-fhir.ch#publish-
 
 # Multi-lingual IG
 * Zulip stream: [#Multi-lingual IGs](https://chat.fhir.org/#narrow/stream/380308-Multi-lingual-IGs)
+* Note: working only for FHIR Core content (terminology) till now
 
 ## Steps
 1. Add parameters to `sushi-config.yaml`
