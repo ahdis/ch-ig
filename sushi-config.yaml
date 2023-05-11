@@ -49,7 +49,7 @@ menu:
 # Parameters
 # Core FHIR: http://build.fhir.org/codesystem-guide-parameter-code.html
 # FHIR Tools IG: http://build.fhir.org/ig/FHIR/fhir-tools-ig/branches/master/CodeSystem-ig-parameters.html
-parameter:
+parameters:
   allow-extensible-warnings: true
   i18n-lang: # A language to translate the IG into.
     - de
