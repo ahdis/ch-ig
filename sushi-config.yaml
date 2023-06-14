@@ -20,10 +20,10 @@ releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | re
 publisher:
   name: HL7 Switzerland
 contact:
-  name: HL7 Switzerland
-  telecom:
-    system: url
-    value: https://www.hl7.ch/
+  - name: HL7 Switzerland
+    telecom:
+      - system: url
+        value: https://www.hl7.ch/
 
 dependencies:
   ch.fhir.ig.ch-core: 3.0.0
