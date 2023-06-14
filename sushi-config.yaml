@@ -9,8 +9,8 @@ name: CH_IG
 title: "CH IG (R4)"
 description: Implementation Guide CH IG (R4) for ...
 status: draft
-license: CC-BY-SA-4.0
-copyright: CC-BY-SA-4.0
+license: CC0-1.0
+copyright: CC0-1.0
 jurisdiction: urn:iso:std:iso:3166#CHE
 date: 2023-05-11
 version: 0.1.0
