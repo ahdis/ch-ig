@@ -1,5 +1,5 @@
 Profile: ChIgPractitioner
-Parent: $SDChCorePractitioner
+Parent: $ChCorePractitioner
 Id: ch-ig-practitioner
 Title: "CH IG Practitioner"
 Description: "CH IG Practitioner profile is just an example!"
