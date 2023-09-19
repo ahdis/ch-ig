@@ -72,6 +72,7 @@ For further information see [here](https://github.com/ahdis/k8s-fhir.ch#publish-
 
 ## Java
 * Install Java as described [here](https://www.java.com/en/download/help/download_options.html)
+   * Java 17 (Java 8 not longer supported, see [here](https://chat.fhir.org/#narrow/stream/179294-committers.2Fannounce/topic/Java.208.20no.20longer.20supported))
 
 ## Jekyll
 * Installation: https://jekyllrb.com/ (see [Jekyll on Windows](http://jekyll-windows.juthilo.com/2-jekyll-gem/) for windows users)
