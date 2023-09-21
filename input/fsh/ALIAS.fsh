@@ -7,3 +7,5 @@ Alias:   $SDChCorePractitioner =        http://fhir.ch/ig/ch-core/StructureDefin
 
 // XML CH IG Code System
 Alias:  $CSChIgExampleTranslation =     http://fhir.ch/ig/ch-ig/CodeSystem/ch-ig-example-translation
+
+Alias: $diagnostic-report-composition-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition
