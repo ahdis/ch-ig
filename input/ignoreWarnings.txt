@@ -1,1 +1,7 @@
 == Suppressed Messages ==
+
+# design choice
+Entry 'http://test.fhir.ch/r4/DiagnosticReport/3DR-CPE' isn't reachable by traversing forwards from the Composition. Only Provenance is approved to be used this way (R4 section 3.3.1)
+Entry 'http://test.fhir.ch/r4/DiagnosticReport/4DR-CPE' isn't reachable by traversing forwards from the Composition. Only Provenance is approved to be used this way (R4 section 3.3.1)
+Entry 'http://test.fhir.ch/r4/DiagnosticReport/5DR-CPE' isn't reachable by traversing forwards from the Composition. Only Provenance is approved to be used this way (R4 section 3.3.1)
+Entry 'http://test.fhir.ch/r4/DiagnosticReport/6DR-CPE' isn't reachable by traversing forwards from the Composition. Only Provenance is approved to be used this way (R4 section 3.3.1)
