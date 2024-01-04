@@ -12,10 +12,10 @@ status: draft
 license: CC0-1.0
 copyright: CC0-1.0
 jurisdiction: urn:iso:std:iso:3166#CHE
-date: 2023-05-11
+date: 2024-01-04
 version: 0.1.0
 fhirVersion: 4.0.1
-copyrightYear: 2021+
+copyrightYear: 2024+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 publisher:
   name: HL7 Switzerland
@@ -26,7 +26,8 @@ contact:
         value: https://www.hl7.ch/
 
 dependencies:
-  ch.fhir.ig.ch-core: 3.0.0
+  hl7.terminology: 5.4.0
+  ch.fhir.ig.ch-core: 4.0.1
 
 pages:
   index.md:
@@ -49,6 +50,7 @@ menu:
 # Core FHIR: http://build.fhir.org/codesystem-guide-parameter-code.html
 # FHIR Tools IG: http://build.fhir.org/ig/FHIR/fhir-tools-ig/branches/master/CodeSystem-ig-parameters.html
 parameters:
+  excludettl: true
   allow-extensible-warnings: true
 
 resources:
