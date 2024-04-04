@@ -12,7 +12,7 @@ status: draft
 license: CC0-1.0
 copyright: CC0-1.0
 jurisdiction: urn:iso:std:iso:3166#CHE
-date: 2024-01-04
+date: 2024-04-04
 version: 0.1.0
 fhirVersion: 4.0.1
 copyrightYear: 2024+
@@ -52,8 +52,6 @@ menu:
 parameters:
   excludettl: true
   allow-extensible-warnings: true
-
-resources:
-  CodeSystem/ch-ig-example-translation:
-    name: CH IG Example Translation
-    exampleBoolean: false
+  display-warnings: true 
+  path-resource:
+    - input/resources
