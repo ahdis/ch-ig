@@ -43,25 +43,37 @@ jobs:
         run: echo "::set-output name=repo::$(echo ${{ github.repository }} | cut -d '/' -f 2)"
         shell: bash
 
-      - name: 📥 Download IG Publisher
-        run: |
-              cd /home/runner/work/${{ steps.repo_name.outputs.repo }}
-              wget -q https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar
-          
-      - uses: actions/checkout@v4
-        with:
-          path: ${{ steps.repo_name.outputs.repo }} 
+      - name: Change to workspace
+        run: echo "Changing to workspace "
+        working-directory: ${{ github.workspace }}          
 
+      - name: Workspace
+        id: repo_name
+        run: echo "${{ github.workspace }}"
+        shell: bash
+
+      # - uses: actions/checkout@v4
+      #   with:
+      #     path: ${{ steps.repo_name.outputs.repo }} 
+        
       - uses: actions/checkout@v4
         with:
           repository: hl7ch/ig-release
           path: ig-release
 
+      - name: 📥 Download IG Publisher
+        run: |
+              wget -q https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar
+              ls -all ./publisher.jar
+
+      - name: List path
+        run: ls -R ./
+
       # Builds the HTML page for the IG.
       - name: 🏃‍♂️ Run IG Publisher
         timeout-minutes: 45 # We need a long timeout here
         run: |
-              cd /home/runner/work/${{ steps.repo_name.outputs.repo }}/${{ steps.repo_name.outputs.repo }}
+              cd ${{ steps.repo_name.outputs.repo }}
               java -Xmx8192m -jar ../publisher.jar  -ig .
               cd ..
 
