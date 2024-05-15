@@ -45,8 +45,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           repository: hl7ch/ig-release
-          with: 
-            path: ig-release
+          path: ig-release
 
       - name: List path
         run: ls -R ./
