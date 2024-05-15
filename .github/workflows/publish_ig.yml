@@ -5,6 +5,9 @@ on:
   release:
     types:
       - created
+  push:
+    branches:
+      - '**'
 
 # The following jobs are equal for all IGs and can be moved to a common composite-action if 'uses'-support is added, see:
 # https://github.com/actions/runner/blob/main/docs/adrs/1144-composite-actions.md
@@ -34,11 +37,16 @@ jobs:
         with:
           repository: ${{ github.repository }}
 
+      - name: Get the repo name
+        id: repo_name
+        run: echo "::set-output name=repo::$(echo ${{ github.repository }} | cut -d '/' -f 2)"
+        shell: bash
+
       # Builds the HTML page for the IG.
       - name: 🏃‍♂️ Run IG Publisher
         timeout-minutes: 45 # We need a long timeout here
         run : |
-              cd  ./${{ github.repository }}
+              cd  ./${{ steps.repo_name.outputs.repo }}
               java -Xmx8192m -jar ../publisher.jar  -ig .
               cd .. 
 
