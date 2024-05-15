@@ -53,6 +53,7 @@ jobs:
         run: |
               cd /home/runner/work/${{ steps.repo_name.outputs.repo }}/${{ steps.repo_name.outputs.repo }}
               java -Xmx8192m -jar ../publisher.jar  -ig .
+              cd ..
               cd .. 
 
       - uses: actions/checkout@v4
