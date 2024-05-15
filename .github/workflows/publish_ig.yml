@@ -48,7 +48,6 @@ jobs:
         working-directory: ${{ github.workspace }}          
 
       - name: Workspace
-        id: repo_name
         run: echo "${{ github.workspace }}"
         shell: bash
 
