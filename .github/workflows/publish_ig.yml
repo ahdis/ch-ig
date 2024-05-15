@@ -43,9 +43,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           repository: ${{ github.repository }}
-
-      - name: List path
-        run: ls -R ./
+          path: ${{ steps.repo_name.outputs.repo }} 
 
       # Builds the HTML page for the IG.
       - name: 🏃‍♂️ Run IG Publisher
@@ -54,7 +52,6 @@ jobs:
               cd /home/runner/work/${{ steps.repo_name.outputs.repo }}/${{ steps.repo_name.outputs.repo }}
               java -Xmx8192m -jar ../publisher.jar  -ig .
               cd ..
-              cd .. 
 
       - uses: actions/checkout@v4
         with:
