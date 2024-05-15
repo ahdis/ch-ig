@@ -32,10 +32,6 @@ jobs:
 
       - name: 📥 Download IG Publisher
         run: wget -q https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar
-          
-      - uses: actions/checkout@v4
-        with:
-          repository: ${{ github.repository }}
 
       - name: Get the repo name
         id: repo_name
@@ -49,7 +45,6 @@ jobs:
       - name: 🏃‍♂️ Run IG Publisher
         timeout-minutes: 45 # We need a long timeout here
         run : |
-              cd /home/runner/work/{{ steps.repo_name.outputs.repo }}/${{ steps.repo_name.outputs.repo }}
               java -Xmx8192m -jar ../publisher.jar  -ig .
               cd .. 
 
@@ -61,13 +56,4 @@ jobs:
       - name: List path
         run: ls -R ./
 
-      # Publishes the HTML page to a seperate branch in order to host it using GitHub-Pages.
-      # This will overwrite the currently published HTML page.
-      # - name: 🚀 Deploy to GitHub-Pages
-      #   uses: peaceiris/actions-gh-pages@v3
-      #   with:
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
-      #     publish_dir: ./igSource/output
-      #     destination_dir: ig/${{ steps.branch-name.outputs.current_branch }}
-      #     exclude_assets: '**.zip,**.tgz,**.pack'
-      #     commit_message: ' ${{ github.event.head_commit.message }}'
+#              cd /home/runner/work/${{ steps.repo_name.outputs.repo }}/${{ steps.repo_name.outputs.repo }}
