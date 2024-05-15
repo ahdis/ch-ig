@@ -30,17 +30,19 @@ jobs:
           java-version: 21
           distribution: adopt
 
-      - name: 📥 Download IG Publisher
-        run: wget -q https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar
-          
-      - uses: actions/checkout@v4
-        with:
-          repository: ${{ github.repository }}
-
       - name: Get the repo name
         id: repo_name
         run: echo "::set-output name=repo::$(echo ${{ github.repository }} | cut -d '/' -f 2)"
         shell: bash
+
+      - name: 📥 Download IG Publisher
+        run: |
+              cd /home/runner/work/${{ steps.repo_name.outputs.repo }}
+              wget -q https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar
+          
+      - uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository }}
 
       - name: List path
         run: ls -R ./
@@ -48,7 +50,7 @@ jobs:
       # Builds the HTML page for the IG.
       - name: 🏃‍♂️ Run IG Publisher
         timeout-minutes: 45 # We need a long timeout here
-        run : |
+        run: |
               cd /home/runner/work/${{ steps.repo_name.outputs.repo }}/${{ steps.repo_name.outputs.repo }}
               java -Xmx8192m -jar ../publisher.jar  -ig .
               cd .. 
