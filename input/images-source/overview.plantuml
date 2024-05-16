@@ -1,0 +1,62 @@
+@startuml
+
+title **Profiles, actors and transactions covered in this national extension**
+
+skinparam componentStyle rectangle
+skinparam svgDimensionStyle false
+
+left to right direction
+
+component "EPR App" {
+  [IUA Authorization Client] as IUAClient
+
+  [Patient Demographics Consumer] as PDQmConsumer
+
+  [PIXm Patient Identifier Cross-reference Consumer] as PIXmConsumer
+  [PIXm Patient Identity Source] as PIXmSource
+
+  [MHD Document Source] as MHDSource
+  [MHD Document Consumer] as MHDConsumer
+
+  [RESTful ATNA Secure Node] as ATNANode
+
+  [Care Services Selective Consumer] as mCSDSelectiveConsumer
+
+  [Policy Source] as PPQmPolicySource
+  [Policy Consumer] as PPQmPolicyConsumer
+}
+
+component "EPR API" {
+  [IUA Authorization Server] as IUAAuthServer
+  IUAClient -> IUAAuthServer : Get Access Token [ITI-71], \nGet Authorization Server Metadata [ITI-103]
+  [IUA Resource Server] as IUAResourceServer
+  IUAClient --> IUAResourceServer : Incorporate Access Token [ITI-72]
+
+  [Patient Demographics Supplier] as PDQmSupplier
+  PDQmConsumer --> PDQmSupplier : Mobile Patient Demographics Query [ITI-78]
+
+  [PIXm Patient Identifier Cross-reference Manager] as PIXmManager
+  PIXmConsumer --> PIXmManager : Mobile Patient Identifier Cross-reference Query [ITI-83]
+  PIXmSource --> PIXmManager : Patient Identity Feed FHIR [ITI-104]
+
+  [MHD Document Recipient] as MHDRecipient
+  MHDSource --> MHDRecipient : Provide Document Bundle [ITI-65], \nUpdate Document Metadata [CH:MHD-1]
+
+  [MHD Document Responder] as MHDResponder
+  MHDConsumer --> MHDResponder : Find Document Lists [ITI-66], \nFind Document References [ITI-67], \nRetrieve Document [ITI-68] 
+
+  [RESTful ATNA Audit Record Repository] as ATNARepository
+  ATNANode --> ATNARepository : Record Audit Event [ITI-20]
+
+  [Care Services Selective Supplier] as mCSDSelectiveSupplier
+  mCSDSelectiveConsumer --> mCSDSelectiveSupplier : Find Matching Care Services [ITI-90]
+
+  [Policy Repository] as PPQmPolicyRepository
+  PPQmPolicySource --> PPQmPolicyRepository : Mobile Privacy Policy Feed [PPQ-3],\nMobile Privacy Policy Bundle Feed [PPQ-4]
+  PPQmPolicyConsumer --> PPQmPolicyRepository : Mobile Privacy Policy Retrieve [PPQ-5]
+}
+
+[User Authentication Provider] as UAProvider
+IUAAuthServer --> UAProvider : Authenticate User
+
+@enduml

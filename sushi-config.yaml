@@ -12,8 +12,8 @@ status: draft
 license: CC0-1.0
 copyright: CC0-1.0
 jurisdiction: urn:iso:std:iso:3166#CHE
-date: 2024-04-04
-version: 1.0.0
+date: 2024-05-16
+version: 1.1.0
 fhirVersion: 4.0.1
 copyrightYear: 2024+
 releaseLabel: draft # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -27,7 +27,7 @@ contact:
 
 dependencies:
   hl7.terminology: 5.4.0
-  ch.fhir.ig.ch-core: 4.0.1
+  ch.fhir.ig.ch-core: 5.0.0-ballot
 
 pages:
   index.md:

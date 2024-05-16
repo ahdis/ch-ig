@@ -3,6 +3,9 @@
 **CH IG** is a template for creating a [HL7 Switzerland](https://www.hl7.ch/) FHIR implementation guide.    
 
 
+<div>{% include overview.svg %}</div>
+
+
 ### Source and Download
 
 [GitHub Repository](https://github.com/ahdis/ch-ig)
