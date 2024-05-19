@@ -53,5 +53,12 @@ parameters:
   excludettl: true
   allow-extensible-warnings: true
   display-warnings: true 
+  i18n-default-lang: en
+  i18n-lang:
+    - de
+    - fr
+  translation-sources:
+    - input/translations-de
+    - input/translations-fr
   path-resource:
     - input/resources

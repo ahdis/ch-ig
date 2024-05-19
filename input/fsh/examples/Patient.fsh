@@ -6,3 +6,4 @@ Description: "Example for Patient"
 * name
   * family = "Meier"
   * given = "Petra"
+* maritalStatus.text = "Married"

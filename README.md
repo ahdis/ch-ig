@@ -110,6 +110,14 @@ For further information see [here](https://github.com/ahdis/k8s-fhir.ch#publish-
 
 ***************************
 
+# Multi-Language IGs
+
+Documentation:
+* https://build.fhir.org/ig/FHIR/ig-guidance/languages.html#producing-multi-language-igs
+* https://chat.fhir.org/#narrow/stream/380308-Multi-lingual-IGs
+
+***************************
+
 # Further links
 * [IG Publisher Documentation](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation)
 * [Using the FHIR Validator](https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Validator)
