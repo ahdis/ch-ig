@@ -55,3 +55,11 @@ parameters:
   display-warnings: true 
   path-resource:
     - input/resources
+
+resources:
+  Binary/PatientNonValid:
+    extension:
+      - url: http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format
+        valueCode: application/fhir+json
+    name: Test FHIR Patient resource invalid embedded in Binary
+    description: Test FHIR Patient resource invalid embeeded in Binary
