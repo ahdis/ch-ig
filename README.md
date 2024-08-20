@@ -52,7 +52,9 @@ See also https://help.github.com/en/articles/creating-a-repository-from-a-templa
 For further information see [here](https://github.com/FHIR/auto-ig-builder#fhir-implementation-guide-auto-builder).
 
 ## Publish the IG
-For further information see [here](https://github.com/ahdis/k8s-fhir.ch#publish-an-implementation-guide-ch-xyz-with-a-version-eg-010).
+For further information see [here](https://github.com/hl7ch/hl7ch.github.io).
+
+You need to give access to your repository for the specific github [app](https://github.com/organizations/hl7ch/settings/apps/fhir-ig-publication-on-fhir-ch/installations)
 
 ***************************
 
