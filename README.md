@@ -116,6 +116,9 @@ Documentation:
 * https://build.fhir.org/ig/FHIR/ig-guidance/languages.html#producing-multi-language-igs
 * https://chat.fhir.org/#narrow/stream/380308-Multi-lingual-IGs
 
+TODO:
+- translation of codes (coding.code -> not cc.text)
+
 ***************************
 
 # Further links

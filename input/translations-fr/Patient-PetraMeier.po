@@ -5,3 +5,10 @@
 msgid "Married"
 msgstr "Marié"
 
+#: CodeableConcept.coding.display
+msgid "verheiratet"
+msgstr "marié-e"
+
+#: CodeableConcept.text
+msgid "German"
+msgstr "Allemand"
