@@ -73,11 +73,11 @@ You need to give access to your repository for the specific github [app](https:/
   * Installation as described above
 
 ## Java
-* Install Java as described [here](https://www.java.com/en/download/help/download_options.html)
-   * Java 17 (Java 8 not longer supported, see [here](https://chat.fhir.org/#narrow/stream/179294-committers.2Fannounce/topic/Java.208.20no.20longer.20supported))
+* Install Java as described [here](https://www.oracle.com/ch-de/java/technologies/downloads/)
+   * Java 23 (Java 8 not longer supported, see [here](https://chat.fhir.org/#narrow/stream/179294-committers.2Fannounce/topic/Java.208.20no.20longer.20supported))
 
 ## Jekyll
-* Installation: https://jekyllrb.com/ (see [Jekyll on Windows](http://jekyll-windows.juthilo.com/2-jekyll-gem/) for windows users)
+* Installation: https://jekyllrb.com/ (see [Jekyll on Windows](https://jekyllrb.com/docs/installation/windows/) for windows users)
 
 ## SUSHI (and Node.js)
 * Install SUSHI (and Node.js) as described [here](https://fshschool.org/docs/sushi/installation/)
