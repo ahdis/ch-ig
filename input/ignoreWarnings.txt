@@ -1,1 +1,6 @@
 == Suppressed Messages ==
+
+# just for this use case
+The IG is not for the international realm, and it uses SNOMED CT, so it should fix the SCT edition in the expansion parameters
+The resource Questionnaire/CommunityFacingQuestionnaire could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk

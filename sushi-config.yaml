@@ -11,9 +11,9 @@ description: Implementation Guide CH IG (R4) for ...
 status: draft
 license: CC0-1.0
 copyright: CC0-1.0
-jurisdiction: urn:iso:std:iso:3166#CHE
+jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001
 date: 2024-08-20
-version: 1.2.2
+version: 0.1.0
 fhirVersion: 4.0.1
 copyrightYear: 2024+
 releaseLabel: draft # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -27,12 +27,13 @@ contact:
 
 dependencies:
   ch.fhir.ig.ch-core: 5.0.0
+  hl7.fhir.uv.sdc: 3.0.0
 
 pages:
   index.md:
     title: Home
-  profiles.md:
-    title: Profiles
+#  profiles.md:
+#    title: Profiles
   extensions.md:
     title: Extensions
   terminology.md:
@@ -40,7 +41,7 @@ pages:
 
 menu:
   Home: index.html
-  Profiles: profiles.html
+#  Profiles: profiles.html
   Extensions: extensions.html
   Terminology: terminology.html
   Artifacts: artifacts.html
@@ -54,3 +55,6 @@ parameters:
   display-warnings: true 
   path-resource:
     - input/resources
+  special-url:
+    - https://simplifier.net/guide/hmb-fhir-ig/StructureDefinition/community-facing-questionnaire
+    - https://simplifier.net/guide/hmb-fhir-ig/ValueSet/medical-conditions

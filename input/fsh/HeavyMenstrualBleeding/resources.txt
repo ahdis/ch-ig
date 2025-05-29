@@ -1,0 +1,111 @@
+Alias: $sct = http://snomed.info/sct
+
+
+Instance: FlorenceBennett
+InstanceOf: Patient
+Usage: #example
+Title: "Florence Bennett"
+Description: "Example for Patient"
+* name[0].family = "Bennett"
+* name[=].given = "Florence"
+* name[=].use = #official
+* name[+].given = "Flo"
+* name[=].use = #usual
+* birthDate = "1951-01-20"
+* contact[0].telecom[0].system = #email
+* contact[=].telecom[=].value = "flo@example.com"
+
+
+Instance: CommunityFacingQuestionnaire
+InstanceOf: Questionnaire
+Usage: #example
+Title: "Community-facing Questionnaire"
+Description: "FHIR Questionnaire based on the 'Heavy Menstrual Bleeding (HMB) Patient Questionnaire' from Women's Health Road (Australia)"
+* meta.profile = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
+* url = "https://simplifier.net/guide/hmb-fhir-ig/StructureDefinition/community-facing-questionnaire"
+* status = #draft
+
+// -------------------------------- 1. Group: Patient Information -------------------------------- //
+* item[0].linkId = "patient-info"
+* item[=].text = "Patient Information"
+* item[=].type = #group
+
+* item[=].item[0].linkId = "firstName"
+* item[=].item[=].text = "First Name"
+* item[=].item[=].type = #string
+* item[=].item[=].required = true
+* item[=].item[=].definition = "http://hl7.org/fhir/StructureDefinition/Patient#Patient.name.given"
+
+* item[=].item[+].linkId = "surname"
+* item[=].item[=].text = "Surname"
+* item[=].item[=].type = #string
+* item[=].item[=].required = true
+* item[=].item[=].definition = "http://hl7.org/fhir/StructureDefinition/Patient#Patient.name.family"
+
+* item[=].item[+].linkId = "preferredName"
+* item[=].item[=].text = "Preferred Name"
+* item[=].item[=].type = #string
+* item[=].item[=].definition = "http://hl7.org/fhir/StructureDefinition/Patient#Patient.name.given"
+
+* item[=].item[+].linkId = "dob"
+* item[=].item[=].text = "DOB"
+* item[=].item[=].type = #date
+* item[=].item[=].required = true
+* item[=].item[=].definition = "http://hl7.org/fhir/StructureDefinition/Patient#Patient.birthDate"
+
+* item[=].item[+].linkId = "email"
+* item[=].item[=].text = "Email"
+* item[=].item[=].type = #string
+* item[=].item[=].definition = "http://hl7.org/fhir/StructureDefinition/Patient#Patient.contact.telecom.value"
+
+* item[=].item[+].linkId = "mainConcern"
+* item[=].item[=].text = "Please outline your main health related concern(s)"
+* item[=].item[=].type = #string
+
+
+Instance: CommunityFacingQuestionnaireResponseFlorenceBennett
+InstanceOf: QuestionnaireResponse
+Usage: #example
+Title: "Community-facing QR Florence Bennett"
+Description: "Example for QuestionnaireResponse for the Community-facing Questionnaire"
+* questionnaire = "https://simplifier.net/guide/hmb-fhir-ig/StructureDefinition/community-facing-questionnaire"
+* status = #in-progress
+
+// -------------------------------- 1. Group: Patient Information -------------------------------- //
+* item[0].linkId = "patient-info"
+* item[=].text = "Patient Information"
+
+* item[=].item[0].linkId = "firstName"
+* item[=].item[=].text = "First Name"
+* item[=].item[=].answer.valueString = "Florence"
+
+* item[=].item[+].linkId = "surname"
+* item[=].item[=].text = "Surname"
+* item[=].item[=].answer.valueString = "Bennett"
+
+* item[=].item[+].linkId = "preferredName"
+* item[=].item[=].text = "Preferred Name"
+* item[=].item[=].answer.valueString = "Flo"
+
+* item[=].item[+].linkId = "dob"
+* item[=].item[=].text = "DOB"
+* item[=].item[=].answer.valueDate = "1951-01-20"
+
+* item[=].item[+].linkId = "email"
+* item[=].item[=].text = "Email"
+* item[=].item[=].answer.valueString = "flo@example.com"
+
+* item[=].item[+].linkId = "mainConcern"
+* item[=].item[=].text = "Please outline your main health related concern(s)"
+* item[=].item[=].answer.valueString = "Heavy Periods (fatigue, occasional dizziness, need to change protection every 1-2 hours on heavy days)"
+
+
+ValueSet: MedicalConditions
+Id: medical-conditions
+Title: "Medical Conditions"
+Description: "ValueSet containing codes for medical conditions"
+* ^experimental = true
+* ^status = #draft
+* ^url = "https://simplifier.net/guide/hmb-fhir-ig/ValueSet/medical-conditions"
+* $sct#428197003 "No known insect allergy (situation)"
+* $sct#409137002 "No known drug allergy (situation)"
