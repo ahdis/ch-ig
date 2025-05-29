@@ -5,50 +5,11 @@ Description: "ValueSet containing codes for medical conditions"
 * ^experimental = true
 * ^status = #draft
 * ^url = "https://simplifier.net/guide/hmb-fhir-ig/ValueSet/medical-conditions"
-* $sct#428197003 "No known insect allergy (situation)"
-* $sct#409137002 "No known drug allergy (situation)"
 
-/*
-Arthritis
-Asthma / COPD
-Chronic Fatigue
-Blood & Clotting Disorders
-Crohn’s / Colitis
-Depression
-Anxiety
-ADHD
-Eating Disorder
-Epilepsy
-Fibromyalgia
-Diabetes
-Low Blood Pressure
-High Blood Pressure
-High Cholesterol
-Migraines
-Insomnia
-Kidney Disease
-Malnutrition
-Osteoporosis
-Stroke
-Varicose Veins
-Anaemia/Iron Deficiency
-Endometriosis
-Adenomyosis
-PCOS
-Uterine Fibroids
-Uterine/Cervical Polyps
-Interstitial Cystitis
-Pelvic Organ Prolapse
-Childhood Disease
-Cardiovascular Disease
-Cancer
-Other
-*/
-
-
-
-
-
+* $sct#3723001 "Arthritis (disorder)"
+* $sct#195967001 "Asthma (disorder)"
+* $sct#13645005 "Chronic obstructive pulmonary disease (disorder)"
+* $sct#52702003 "Chronic fatigue syndrome (disorder)"
 
 /*
 Instance: menstrual-flow-volume-vs

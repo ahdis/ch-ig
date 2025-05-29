@@ -2,13 +2,12 @@ Instance: CommunityFacingQuestionnaireResponseFlorenceBennett
 InstanceOf: QuestionnaireResponse
 Usage: #example
 Title: "Community-facing QR Florence Bennett"
-Description: "Example for QuestionnaireResponse for the Community-facing Questionnaire"
 * questionnaire = "https://simplifier.net/guide/hmb-fhir-ig/StructureDefinition/community-facing-questionnaire"
 * status = #in-progress
 
-// -------------------------------- 1. Group: Patient Information -------------------------------- //
-* item[0].linkId = "patient-info"
-* item[=].text = "Patient Information"
+// -------------------------------- 1. Group: Personal Information -------------------------------- //
+* item[0].linkId = "personalInformation"
+* item[=].text = "PERSONAL INFORMATION"
 
 * item[=].item[0].linkId = "firstName"
 * item[=].item[=].text = "First Name"
@@ -34,9 +33,15 @@ Description: "Example for QuestionnaireResponse for the Community-facing Questio
 * item[=].item[=].text = "Please outline your main health related concern(s)"
 * item[=].item[=].answer.valueString = "Heavy Periods (fatigue, occasional dizziness, need to change protection every 1-2 hours on heavy days)"
 
-/*
-* item[=].item[+].linkId = "pastMedicalHistory"
-* item[=].item[=].text = "PAST MEDICAL HISTORY: Please check any past or current medical conditions that apply to you:"
-* item[=].item[=].answer[0].valueCoding = $sct#428197003 "No known insect allergy (situation)"
-* item[=].item[=].answer[+].valueCoding = $sct#409137002 "No known drug allergy (situation)"
-*/
+// -------------------------------- 2. Group: Past Medical History -------------------------------- //
+* item[+].linkId = "pastMedicalHistory"
+* item[=].text = "PAST MEDICAL HISTORY"
+
+* item[=].item[0].linkId = "medicalConditions"
+* item[=].item[=].text = "Please check any past or current medical conditions that apply to you"
+* item[=].item[=].answer[0].valueCoding = $sct#195967001 "Asthma (disorder)"
+* item[=].item[=].answer[+].valueCoding = $sct#52702003 "Chronic fatigue syndrome (disorder)"
+
+* item[=].item[+].linkId = "childhoodDisease"
+* item[=].item[=].text = "Childhood Disease"
+* item[=].item[=].answer.valueString = "Measles"

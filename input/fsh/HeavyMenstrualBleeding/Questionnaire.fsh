@@ -2,14 +2,17 @@ Instance: CommunityFacingQuestionnaire
 InstanceOf: Questionnaire
 Usage: #example
 Title: "Community-facing Questionnaire"
-Description: "FHIR Questionnaire based on the 'Heavy Menstrual Bleeding (HMB) Patient Questionnaire' from Women's Health Road (Australia)"
 * meta.profile = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * url = "https://simplifier.net/guide/hmb-fhir-ig/StructureDefinition/community-facing-questionnaire"
+* name = "CommunityFacingQuestionnaire"
+* title = "Community-facing Questionnaire"
 * status = #draft
+* experimental = true
+* description = "FHIR Questionnaire based on the 'Heavy Menstrual Bleeding (HMB) Patient Questionnaire' from Women's Health Road (Australia)"
 
-// -------------------------------- 1. Group: Patient Information -------------------------------- //
-* item[0].linkId = "patient-info"
-* item[=].text = "Patient Information"
+// -------------------------------- 1. Group: Personal Information -------------------------------- //
+* item[0].linkId = "personalInformation"
+* item[=].text = "PERSONAL INFORMATION"
 * item[=].type = #group
 
 * item[=].item[0].linkId = "firstName"
@@ -44,55 +47,57 @@ Description: "FHIR Questionnaire based on the 'Heavy Menstrual Bleeding (HMB) Pa
 * item[=].item[=].text = "Please outline your main health related concern(s)"
 * item[=].item[=].type = #string
 
+// -------------------------------- 2. Group: Past Medical History -------------------------------- //
+* item[+].linkId = "pastMedicalHistory"
+* item[=].text = "PAST MEDICAL HISTORY"
+* item[=].type = #group
+
+* item[=].item[0].linkId = "medicalConditions"
+* item[=].item[=].text = "Please check any past or current medical conditions that apply to you"
+* item[=].item[=].type = #choice
+* item[=].item[=].repeats = true
+* item[=].item[=].answerValueSet = "https://simplifier.net/guide/hmb-fhir-ig/ValueSet/medical-conditions"
+
+* item[=].item[+].linkId = "childhoodDisease"
+* item[=].item[=].text = "Childhood Disease"
+* item[=].item[=].type = #string
+
+* item[=].item[+].linkId = "cardiovascularDisease"
+* item[=].item[=].text = "Cardiovascular Disease"
+* item[=].item[=].type = #string
+
+* item[=].item[+].linkId = "cancer"
+* item[=].item[=].text = "Cancer"
+* item[=].item[=].type = #string
+
+* item[=].item[+].linkId = "other"
+* item[=].item[=].text = "Other"
+* item[=].item[=].type = #string
+
+// -------------------------------- 3. Group: Menstrual History -------------------------------- //
+
+* item[+].linkId = "menstrualHistory"
+* item[=].text = "MENSTRUAL HISTORY (FIGO AUB PARAMETERS, SAMANTA, VAS, PIPPA)"
+* item[=].type = #group
+
+* item[=].item[0].linkId = "ageOfFirstMenstrualPeriod"
+* item[=].item[=].text = "Age of first menstrual period"
+* item[=].item[=].type = #integer
+* item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-unit"
+* item[=].item[=].extension[=].valueCoding = $ucum#a "year"
+
+* item[=].item[+].linkId = "dateYourLastPeriodBegan"
+* item[=].item[=].text = "Date your last period began"
+* item[=].item[=].type = #date
+
+* item[=].item[+].linkId = "durationOfMenstrualPeriod"
+* item[=].item[=].text = "Duration of menstrual period"
+* item[=].item[=].type = #integer
+* item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-unit"
+* item[=].item[=].extension[=].valueCoding = $ucum#kg "kilogram"
 
 /*
 
-
-* item[+].linkId = "pastMedicalHistory"
-* item[=].text = "PAST MEDICAL HISTORY: Please check any past or current medical conditions that apply to you:"
-* item[=].type = #choice
-* item[=].repeats = true
-* item[=].answerValueSet = "https://simplifier.net/guide/hmb-fhir-ig/ValueSet/past-medical-history"
-
-
-
-
-
-
-
-* item[+].linkId = "past-medical-history"
-* item[=].text = "Past Medical History"
-* item[=].type = #group
-* item[=].item[0].linkId = "medical-conditions"
-* item[=].item[=].text = "Please check any past or current medical conditions that apply to you:"
-* item[=].item[=].type = #choice
-* item[=].item[=].repeats = true
-* item[=].item[=].answerValueSet = "http://womenshealthroad.com.au/fhir/ValueSet/medical-conditions"
-* item[=].item[+].linkId = "childhood-disease"
-* item[=].item[=].text = "Childhood Disease (please specify)"
-* item[=].item[=].type = #string
-* item[=].item[+].linkId = "cardiovascular-disease-detail"
-* item[=].item[=].text = "Cardiovascular Disease (please specify)"
-* item[=].item[=].type = #string
-* item[=].item[+].linkId = "cancer-detail"
-* item[=].item[=].text = "Cancer (please specify)"
-* item[=].item[=].type = #string
-* item[=].item[+].linkId = "other-condition"
-* item[=].item[=].text = "Other condition (please specify)"
-* item[=].item[=].type = #string
-
-* item[+].linkId = "menstrual-history"
-* item[=].text = "Menstrual History (FIGO AUB Parameters)"
-* item[=].type = #group
-* item[=].item[0].linkId = "first-period-age"
-* item[=].item[=].text = "Age of first menstrual period"
-* item[=].item[=].type = #integer
-* item[=].item[+].linkId = "last-period-date"
-* item[=].item[=].text = "Date your last period began"
-* item[=].item[=].type = #date
-* item[=].item[+].linkId = "period-duration"
-* item[=].item[=].text = "Duration of menstrual period (days)"
-* item[=].item[=].type = #integer
 * item[=].item[+].linkId = "period-regularity"
 * item[=].item[=].text = "Regularity of period length"
 * item[=].item[=].type = #choice
@@ -153,6 +158,8 @@ Description: "FHIR Questionnaire based on the 'Heavy Menstrual Bleeding (HMB) Pa
 * item[=].item[=].item[=].text = "Avoid certain activities, travel, or leisure plans, because you need to change your tampon or pad frequently?"
 * item[=].item[=].item[=].type = #choice
 * item[=].item[=].item[=].answerValueSet = "http://womenshealthroad.com.au/fhir/ValueSet/yes-no"
+
+
 
 * item[+].linkId = "period-pain"
 * item[=].text = "Period Pain"
