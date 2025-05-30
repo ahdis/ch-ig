@@ -684,6 +684,8 @@ Title: "Community-facing Questionnaire"
 * item[=].item[=].item[+].linkId = "7.4.1"
 * item[=].item[=].item[=].text = "Cardiovascular disease <55 yrs"
 * item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#radio-button
 * item[=].item[=].item[=].answerOption[0].valueCoding = $sct#373066001 "Yes"
 * item[=].item[=].item[=].answerOption[+].valueCoding = $sct#373067005 "No"
 * item[=].item[=].item[=].enableWhen[0].question = "7.4"
@@ -707,3 +709,158 @@ Title: "Community-facing Questionnaire"
 * item[=].item[=].enableWhen[=].operator = #exists
 * item[=].item[=].enableWhen[=].answerBoolean = true
 * item[=].item[=].enableBehavior = #any
+
+* item[+].linkId = "8"
+* item[=].text = "SOCIAL HISTORY"
+* item[=].type = #group
+
+* item[=].item[0].linkId = "8.1"
+* item[=].item[=].text = "Do you currently have a partner(s)?"
+* item[=].item[=].type = #choice
+* item[=].item[=].answerOption[0].valueCoding = $sct#373066001 "Yes"
+* item[=].item[=].answerOption[+].valueCoding = $sct#373067005 "No"
+* item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#radio-button
+
+* item[=].item[=].item[0].linkId = "8.1.1"
+* item[=].item[=].item[=].text = "If you are comfortable to share, what is your partner/s' name and sex/gender/age?"
+* item[=].item[=].item[=].type = #string
+* item[=].item[=].item[=].repeats = true
+* item[=].item[=].item[=].enableWhen[0].question = "8.1"
+* item[=].item[=].item[=].enableWhen[=].operator = #=
+* item[=].item[=].item[=].enableWhen[=].answerCoding = $sct#373066001 // "Yes"
+
+* item[=].item[+].linkId = "8.2"
+* item[=].item[=].text = "Are you currently working?"
+* item[=].item[=].type = #choice
+* item[=].item[=].answerOption[0].valueCoding = $sct#373066001 "Yes"
+* item[=].item[=].answerOption[+].valueCoding = $sct#373067005 "No"
+* item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#radio-button
+
+* item[=].item[=].item[0].linkId = "8.2.1"
+* item[=].item[=].item[=].text = "Please provide details about your work"
+* item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].repeats = true
+* item[=].item[=].item[=].enableWhen[0].question = "8.2"
+* item[=].item[=].item[=].enableWhen[=].operator = #=
+* item[=].item[=].item[=].enableWhen[=].answerCoding = $sct#373066001 // "Yes"
+
+* item[=].item[=].item[=].item[0].linkId = "8.2.1.1"
+* item[=].item[=].item[=].item[=].text = "Employment Type (PT, FT, Casual)"
+* item[=].item[=].item[=].item[=].type = #string
+
+* item[=].item[=].item[=].item[+].linkId = "8.2.1.2"
+* item[=].item[=].item[=].item[=].text = "Occupation"
+* item[=].item[=].item[=].item[=].type = #string
+
+* item[=].item[+].linkId = "8.3"
+* item[=].item[=].text = "Are you currently studying?"
+* item[=].item[=].type = #choice
+* item[=].item[=].answerOption[0].valueCoding = $sct#373066001 "Yes"
+* item[=].item[=].answerOption[+].valueCoding = $sct#373067005 "No"
+* item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#radio-button
+
+* item[=].item[=].item[0].linkId = "8.3.1"
+* item[=].item[=].item[=].text = "Institution"
+* item[=].item[=].item[=].type = #string
+* item[=].item[=].item[=].enableWhen[0].question = "8.3"
+* item[=].item[=].item[=].enableWhen[=].operator = #=
+* item[=].item[=].item[=].enableWhen[=].answerCoding = $sct#373066001 // "Yes"
+
+* item[=].item[=].item[+].linkId = "8.3.2"
+* item[=].item[=].item[=].text = "Level & Area of study"
+* item[=].item[=].item[=].type = #string
+* item[=].item[=].item[=].enableWhen[0].question = "8.3"
+* item[=].item[=].item[=].enableWhen[=].operator = #=
+* item[=].item[=].item[=].enableWhen[=].answerCoding = $sct#373066001 // "Yes"
+
+* item[=].item[+].linkId = "8.4"
+* item[=].item[=].text = "Lifestyle"
+* item[=].item[=].type = #group
+
+* item[=].item[=].item[0].linkId = "8.4.1"
+* item[=].item[=].item[=].text = "Do you currently smoke?"
+* item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].answerOption[0].valueCoding = $sct#373066001 "Yes"
+* item[=].item[=].item[=].answerOption[+].valueCoding = $sct#373067005 "No"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #past "In Past"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #vape "Vape"
+* item[=].item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#radio-button
+
+* item[=].item[=].item[+].linkId = "8.4.2"
+* item[=].item[=].item[=].text = "Do you take any recreational drugs?"
+* item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].answerOption[0].valueCoding = $sct#373066001 "Yes"
+* item[=].item[=].item[=].answerOption[+].valueCoding = $sct#373067005 "No"
+* item[=].item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#radio-button
+
+* item[=].item[=].item[+].linkId = "8.4.3"
+* item[=].item[=].item[=].text = "How often do you drink Alcohol?"
+* item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].answerOption[0].valueCoding = #never "Never"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #ltmonthly "< Monthly"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #1_2pm "1-2 days per month"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #1_2pw "1-2 days a week"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #3_4pw "3-4 days a week"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #5_6pw "5-6 days a week"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #everyday "Everyday"
+* item[=].item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#radio-button
+
+* item[=].item[=].item[=].item[0].linkId = "8.4.3.1"
+* item[=].item[=].item[=].item[=].text = "On each occasion, how much do you normally drink? (1 drink = 1 can of beer, 1 glass of wine, or 1 shot of spirits)"
+* item[=].item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].item[=].answerOption[0].valueCoding = #1_3 "1-3"
+* item[=].item[=].item[=].item[=].answerOption[+].valueCoding = #3_5 "3-5"
+* item[=].item[=].item[=].item[=].answerOption[+].valueCoding = #5_7 "5-7"
+* item[=].item[=].item[=].item[=].answerOption[+].valueCoding = #7plus "7+"
+* item[=].item[=].item[=].item[=].enableWhen[0].question = "8.4.3"
+* item[=].item[=].item[=].item[=].enableWhen[=].operator = #!=
+* item[=].item[=].item[=].item[=].enableWhen[=].answerCoding = #never
+* item[=].item[=].item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item[=].item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#radio-button
+
+* item[=].item[=].item[+].linkId = "8.4.4"
+* item[=].item[=].item[=].text = "How many hours of physical activity do you do on an average week?"
+* item[=].item[=].item[=].type = #decimal
+* item[=].item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-unit"
+* item[=].item[=].item[=].extension[=].valueCoding = $ucum#h "hour"
+
+* item[=].item[=].item[=].item[0].linkId = "8.4.4.1"
+* item[=].item[=].item[=].item[=].text = "Frequency (times per week)"
+* item[=].item[=].item[=].item[=].type = #integer
+* item[=].item[=].item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-unit"
+* item[=].item[=].item[=].item[=].extension[=].valueCoding = $ucum#/wk "per week"
+
+* item[=].item[=].item[=].item[+].linkId = "8.4.4.2"
+* item[=].item[=].item[=].item[=].text = "Intensity"
+* item[=].item[=].item[=].item[=].type = #string
+
+* item[+].linkId = "9"
+* item[=].text = "SURGICAL HISTORY"
+* item[=].type = #group
+
+* item[=].item[0].linkId = "9.1"
+* item[=].item[=].text = "Please provide details for each surgery you have had"
+* item[=].item[=].type = #group
+* item[=].item[=].repeats = true
+
+* item[=].item[=].item[0].linkId = "9.1.1"
+* item[=].item[=].item[=].text = "Year"
+* item[=].item[=].item[=].type = #integer
+* item[=].item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/minValue"
+* item[=].item[=].item[=].extension[=].valueInteger = 1900
+* item[=].item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/maxValue"
+* item[=].item[=].item[=].extension[=].valueInteger = 2100
+
+* item[=].item[=].item[+].linkId = "9.1.2"
+* item[=].item[=].item[=].text = "Place of Surgery"
+* item[=].item[=].item[=].type = #string
+
+* item[=].item[=].item[+].linkId = "9.1.3"
+* item[=].item[=].item[=].text = "Details (Surgeon, Type of Procedure, any complications or issues?, findings)"
+* item[=].item[=].item[=].type = #string
