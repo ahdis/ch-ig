@@ -605,3 +605,105 @@ Title: "Community-facing Questionnaire"
 * item[=].item[=].item[+].linkId = "5.8.1.5"
 * item[=].item[=].item[=].text = "Results / Findings"
 * item[=].item[=].item[=].type = #string
+
+* item[+].linkId = "6"
+* item[=].text = "CURRENT MEDICATIONS"
+* item[=].type = #group
+
+* item[=].item[0].linkId = "6.1"
+* item[=].item[=].text = "Please provide your current medications"
+* item[=].item[=].type = #group
+* item[=].item[=].repeats = true
+
+* item[=].item[=].item[0].linkId = "6.1.1"
+* item[=].item[=].item[=].text = "Medication"
+* item[=].item[=].item[=].type = #string
+
+* item[=].item[=].item[+].linkId = "6.1.2"
+* item[=].item[=].item[=].text = "Dose"
+* item[=].item[=].item[=].type = #string
+
+* item[=].item[=].item[+].linkId = "6.1.3"
+* item[=].item[=].item[=].text = "Frequency"
+* item[=].item[=].item[=].type = #string
+
+* item[=].item[=].item[+].linkId = "6.1.4"
+* item[=].item[=].item[=].text = "Reason for Medication"
+* item[=].item[=].item[=].type = #string
+
+* item[=].item[=].item[+].linkId = "6.1.5"
+* item[=].item[=].item[=].text = "Duration you have been taking this medication for"
+* item[=].item[=].item[=].type = #string
+
+* item[+].linkId = "7"
+* item[=].text = "FAMILY HISTORY"
+* item[=].type = #group
+
+* item[=].item[0].linkId = "7.1"
+* item[=].item[=].text = "Blood and Clotting Disorders"
+* item[=].item[=].type = #choice
+* item[=].item[=].repeats = true
+* item[=].item[=].answerOption[0].valueCoding = #vwd "Von Willebrand disease"
+* item[=].item[=].answerOption[+].valueCoding = #haem "Haemophilia"
+* item[=].item[=].answerOption[+].valueCoding = #thromb "Thrombophilia (e.g. Factor V Leiden, Protein C/S deficiency)"
+* item[=].item[=].answerOption[+].valueCoding = #bruising "Easy bruising or excessive bleeding"
+* item[=].item[=].answerOption[+].valueCoding = #clots "History of blood clots (DVT, stroke before age 50)"
+
+* item[=].item[+].linkId = "7.2"
+* item[=].item[=].text = "Endocrine and Hormonal Conditions"
+* item[=].item[=].type = #choice
+* item[=].item[=].repeats = true
+* item[=].item[=].answerOption[0].valueCoding = #thyroid "Thyroid Disease"
+* item[=].item[=].answerOption[+].valueCoding = #pcos "PCOS"
+* item[=].item[=].answerOption[+].valueCoding = #diabetes "Diabetes (Type 1 or Type 2)"
+* item[=].item[=].answerOption[+].valueCoding = #menopause "Early menopause / premature ovarian insufficiency"
+* item[=].item[=].answerOption[+].valueCoding = #adrenal "Adrenal disorders"
+
+* item[=].item[+].linkId = "7.3"
+* item[=].item[=].text = "Cancer / Malignancy"
+* item[=].item[=].type = #choice
+* item[=].item[=].repeats = true
+* item[=].item[=].answerOption[0].valueCoding = #breast "Breast Cancer"
+* item[=].item[=].answerOption[+].valueCoding = #ovarian "Ovarian cancer"
+* item[=].item[=].answerOption[+].valueCoding = #uterine "Uterine (endometrial cancer)"
+* item[=].item[=].answerOption[+].valueCoding = #cervical "Cervical cancer"
+* item[=].item[=].answerOption[+].valueCoding = #colon "Colon cancer (<50 yrs or related to Lynch Syndrome)"
+* item[=].item[=].answerOption[+].valueCoding = #hereditary "Other hereditary cancers (e.g. BRCA1/2, Lynch Syndrome)"
+
+* item[=].item[+].linkId = "7.4"
+* item[=].item[=].text = "Other relevant conditions"
+* item[=].item[=].type = #choice
+* item[=].item[=].repeats = true
+* item[=].item[=].answerOption[0].valueCoding = #endometriosis "Endometriosis or adenomyosis"
+* item[=].item[=].answerOption[+].valueCoding = #fibroids "Fibroids"
+* item[=].item[=].answerOption[+].valueCoding = #osteoporosis "Osteoporosis or early bone loss"
+* item[=].item[=].answerOption[+].valueCoding = #cardio "Cardiovascular disease"
+* item[=].item[=].answerOption[+].valueCoding = #autoimmune "Autoimmune conditions"
+* item[=].item[=].answerOption[+].valueCoding = #genetic "Genetic syndromes (e.g. Turner syndrome, Kallmann syndrome)"
+
+* item[=].item[=].item[+].linkId = "7.4.1"
+* item[=].item[=].item[=].text = "Cardiovascular disease <55 yrs"
+* item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].answerOption[0].valueCoding = $sct#373066001 "Yes"
+* item[=].item[=].item[=].answerOption[+].valueCoding = $sct#373067005 "No"
+* item[=].item[=].item[=].enableWhen[0].question = "7.4"
+* item[=].item[=].item[=].enableWhen[=].operator = #=
+* item[=].item[=].item[=].enableWhen[=].answerCoding = #cardio
+
+* item[=].item[+].linkId = "7.5"
+* item[=].item[=].text = "Please provide details about the conditions you selected above (i.e. date & age at diagnosis, outcome of diagnosis, type of cancer etc.)"
+* item[=].item[=].type = #string
+* item[=].item[=].repeats = true
+* item[=].item[=].enableWhen[0].question = "7.1"
+* item[=].item[=].enableWhen[=].operator = #exists
+* item[=].item[=].enableWhen[=].answerBoolean = true
+* item[=].item[=].enableWhen[+].question = "7.2"
+* item[=].item[=].enableWhen[=].operator = #exists
+* item[=].item[=].enableWhen[=].answerBoolean = true
+* item[=].item[=].enableWhen[+].question = "7.3"
+* item[=].item[=].enableWhen[=].operator = #exists
+* item[=].item[=].enableWhen[=].answerBoolean = true
+* item[=].item[=].enableWhen[+].question = "7.4"
+* item[=].item[=].enableWhen[=].operator = #exists
+* item[=].item[=].enableWhen[=].answerBoolean = true
+* item[=].item[=].enableBehavior = #any
