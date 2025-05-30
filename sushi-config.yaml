@@ -53,8 +53,6 @@ parameters:
   excludettl: true
   allow-extensible-warnings: true
   display-warnings: true 
-  path-resource:
-    - input/resources
   special-url:
     - https://simplifier.net/guide/hmb-fhir-ig/Questionnaire/community-facing-questionnaire
     - https://simplifier.net/guide/hmb-fhir-ig/Questionnaire/specialist-referral-questionnaire
