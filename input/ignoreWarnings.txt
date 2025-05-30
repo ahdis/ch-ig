@@ -5,6 +5,4 @@ The IG is not for the international realm, and it uses SNOMED CT, so it should f
 The resource Questionnaire/%
 The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 Unable to find ImplementationGuide.definition.resource.description%
-Wrong Display Name 'year' for http://unitsofmeasure.org#a. Valid display is 'a' (for the language(s) 'en-US') 
-Wrong Display Name 'kilogram' for http://unitsofmeasure.org#kg. Valid display is 'kg' (for the language(s) 'en-US')
-Wrong Display Name 'day' for http://unitsofmeasure.org#d. Valid display is 'd' (for the language(s) 'en-US')
+Wrong Display Name%

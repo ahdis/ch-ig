@@ -172,7 +172,7 @@ Title: "Community-facing Questionnaire"
 * item[=].item[=].extension[=].valueInteger = 10
 
 * item[=].item[+].linkId = "3.11"
-* item[=].item[=].text = "During heavier bleeding days do you:"
+* item[=].item[=].text = "During heavier bleeding days do you"
 * item[=].item[=].type = #group
 * item[=].item[=].item[0].linkId = "3.11.1"
 * item[=].item[=].item[=].text = "Have to use double protection or get up to change your sanitary protection during the night?"
@@ -218,7 +218,7 @@ Title: "Community-facing Questionnaire"
 * item[=].item[=].item[=].type = #integer
 * item[=].item[=].item[=].enableWhen.question = "3.12.1"
 * item[=].item[=].item[=].enableWhen.operator = #!=
-* item[=].item[=].item[=].enableWhen.answerCoding = $sct#373067005 "No"
+* item[=].item[=].item[=].enableWhen.answerCoding = $sct#373067005 // "No"
 * item[=].item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
 * item[=].item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#slider
 * item[=].item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-sliderStepValue"
@@ -235,7 +235,7 @@ Title: "Community-facing Questionnaire"
 * item[=].item[=].item[=].extension[=].valueCoding = $ucum#a "year"
 * item[=].item[=].item[=].enableWhen.question = "3.12.1"
 * item[=].item[=].item[=].enableWhen.operator = #!=
-* item[=].item[=].item[=].enableWhen.answerCoding = $sct#373067005 "No"
+* item[=].item[=].item[=].enableWhen.answerCoding = $sct#373067005 // "No"
 
 * item[=].item[=].item[+].linkId = "3.12.4"
 * item[=].item[=].item[=].text = "How many days each month do you have period pain for?"
@@ -244,7 +244,7 @@ Title: "Community-facing Questionnaire"
 * item[=].item[=].item[=].extension[=].valueCoding = $ucum#d "day"
 * item[=].item[=].item[=].enableWhen.question = "3.12.1"
 * item[=].item[=].item[=].enableWhen.operator = #!=
-* item[=].item[=].item[=].enableWhen.answerCoding = $sct#373067005 "No"
+* item[=].item[=].item[=].enableWhen.answerCoding = $sct#373067005 // "No"
 
 * item[=].item[+].linkId = "3.13"
 * item[=].item[=].text = "Where do you feel your period pain?"
@@ -252,7 +252,7 @@ Title: "Community-facing Questionnaire"
 * item[=].item[=].repeats = true
 * item[=].item[=].enableWhen.question = "3.12.1"
 * item[=].item[=].enableWhen.operator = #!=
-* item[=].item[=].enableWhen.answerCoding = $sct#373067005 "No"
+* item[=].item[=].enableWhen.answerCoding = $sct#373067005 // "No"
 * item[=].item[=].answerValueSet = "https://simplifier.net/guide/hmb-fhir-ig/ValueSet/period-pain-body-sites"
 
 * item[=].item[+].linkId = "3.13.1"
@@ -268,7 +268,7 @@ Title: "Community-facing Questionnaire"
 * item[=].item[=].repeats = false
 * item[=].item[=].enableWhen.question = "3.12.1"
 * item[=].item[=].enableWhen.operator = #!=
-* item[=].item[=].enableWhen.answerCoding = $sct#373067005 "No"
+* item[=].item[=].enableWhen.answerCoding = $sct#373067005 // "No"
 * item[=].item[=].answerOption[0].valueCoding = #yes "Yes"
 * item[=].item[=].answerOption[+].valueCoding = #little "A little"
 * item[=].item[=].answerOption[+].valueCoding = #not-at-all "Not at all"
@@ -277,3 +277,168 @@ Title: "Community-facing Questionnaire"
 * item[+].linkId = "4"
 * item[=].text = "SEXUAL AND REPRODUCTIVE HISTORY"
 * item[=].type = #group
+
+* item[=].item[0].linkId = "4.1"
+* item[=].item[=].text = "Are you currently sexually active?"
+* item[=].item[=].type = #choice
+* item[=].item[=].repeats = false
+* item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#radio-button
+* item[=].item[=].answerOption[0].valueCoding = $sct#373066001 "Yes"
+* item[=].item[=].answerOption[+].valueCoding = $sct#373067005 "No"
+
+* item[=].item[+].linkId = "4.2"
+* item[=].item[=].text = "Are you currently trying to get pregnant?"
+* item[=].item[=].type = #choice
+* item[=].item[=].repeats = false
+* item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#radio-button
+* item[=].item[=].answerOption[0].valueCoding = $sct#373066001 "Yes"
+* item[=].item[=].answerOption[+].valueCoding = $sct#373067005 "No"
+* item[=].item[=].answerOption[+].valueCoding = #want-in-future "Want in future"
+
+* item[=].item[+].linkId = "4.3"
+* item[=].item[=].text = "Do you experience any bleeding after sexual intercourse?"
+* item[=].item[=].type = #choice
+* item[=].item[=].repeats = false
+* item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#radio-button
+* item[=].item[=].answerOption[0].valueCoding = $sct#373066001 "Yes"
+* item[=].item[=].answerOption[+].valueCoding = $sct#373067005 "No"
+
+* item[=].item[+].linkId = "4.4"
+* item[=].item[=].text = "Do you experience any excessive pain during sexual intercourse?"
+* item[=].item[=].type = #choice
+* item[=].item[=].repeats = false
+* item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#radio-button
+* item[=].item[=].answerOption[0].valueCoding = $sct#373066001 "Yes"
+* item[=].item[=].answerOption[+].valueCoding = $sct#373067005 "No"
+
+* item[=].item[+].linkId = "4.4.1"
+* item[=].item[=].text = "How would you describe this pain on a scale from 1-10?"
+* item[=].item[=].type = #integer
+* item[=].item[=].enableWhen.question = "4.4"
+* item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].enableWhen.answerCoding = $sct#373066001 // Yes
+* item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#slider
+* item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-sliderStepValue"
+* item[=].item[=].extension[=].valueInteger = 1
+* item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/minValue"
+* item[=].item[=].extension[=].valueInteger = 1
+* item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/maxValue"
+* item[=].item[=].extension[=].valueInteger = 10
+
+* item[=].item[+].linkId = "4.5"
+* item[=].item[=].text = "What contraception, if any, are you currently using?"
+* item[=].item[=].type = #string
+
+* item[=].item[=].item[+].linkId = "4.5.1"
+* item[=].item[=].item[=].text = "For how long?"
+* item[=].item[=].item[=].type = #string
+
+* item[=].item[=].item[+].linkId = "4.5.2"
+* item[=].item[=].item[=].text = "For any hormonal contraception, what impact has this had on your period/cycle? (flow volume, duration, frequency etc.)"
+* item[=].item[=].item[=].type = #string
+
+* item[=].item[+].linkId = "4.6"
+* item[=].item[=].text = "What contraception options, if any, have you used in the past?"
+* item[=].item[=].type = #string
+
+* item[=].item[=].item[+].linkId = "4.6.1"
+* item[=].item[=].item[=].text = "For any previous hormonal contraception, what impact did they have on your period/cycle?"
+* item[=].item[=].item[=].type = #string
+
+* item[=].item[+].linkId = "4.7"
+* item[=].item[=].text = "Do you have any current or a previous history of sexually transmitted diseases?"
+* item[=].item[=].type = #choice
+* item[=].item[=].repeats = false
+* item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#radio-button
+* item[=].item[=].answerOption[0].valueCoding = $sct#373066001 "Yes"
+* item[=].item[=].answerOption[+].valueCoding = $sct#373067005 "No"
+
+* item[=].item[=].item[+].linkId = "4.7.1"
+* item[=].item[=].item[=].text = "Please provide detail (date, type, treatment)"
+* item[=].item[=].item[=].type = #string
+* item[=].item[=].item[=].enableWhen.question = "4.7"
+* item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].enableWhen.answerCoding = $sct#373066001 // Yes
+
+* item[=].item[+].linkId = "4.8"
+* item[=].item[=].text = "Do you have any other sexual dysfunctions/issues related to sex?"
+* item[=].item[=].type = #string
+
+* item[=].item[+].linkId = "4.9"
+* item[=].item[=].text = "Please let us know of any previous pregnancy history including abortions & miscarriages (if comfortable)"
+* item[=].item[=].type = #group
+
+* item[=].item[=].item[0].linkId = "4.9.1"
+* item[=].item[=].item[=].text = "Please provide the following information for each pregnancy"
+* item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].repeats = true
+
+* item[=].item[=].item[=].item[0].linkId = "4.9.1.1"
+* item[=].item[=].item[=].item[=].text = "Birthplace"
+* item[=].item[=].item[=].item[=].type = #string
+
+* item[=].item[=].item[=].item[+].linkId = "4.9.1.2"
+* item[=].item[=].item[=].item[=].text = "Date"
+* item[=].item[=].item[=].item[=].type = #date
+
+* item[=].item[=].item[=].item[+].linkId = "4.9.1.3"
+* item[=].item[=].item[=].item[=].text = "Gestation"
+* item[=].item[=].item[=].item[=].type = #integer
+* item[=].item[=].item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-unit"
+* item[=].item[=].item[=].item[=].extension[=].valueCoding = $ucum#wk "week"
+* item[=].item[=].item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/minValue"
+* item[=].item[=].item[=].item[=].extension[=].valueInteger = 1
+* item[=].item[=].item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/maxValue"
+* item[=].item[=].item[=].item[=].extension[=].valueInteger = 45
+
+* item[=].item[=].item[=].item[+].linkId = "4.9.1.4"
+* item[=].item[=].item[=].item[=].text = "Type of Birth (e.g. Vaginal or C/S)"
+* item[=].item[=].item[=].item[=].type = #string
+
+* item[=].item[=].item[=].item[+].linkId = "4.9.1.5"
+* item[=].item[=].item[=].item[=].text = "Model of Care (e.g. Midwife, Public/Private OB)"
+* item[=].item[=].item[=].item[=].type = #string
+
+* item[=].item[=].item[=].item[+].linkId = "4.9.1.6"
+* item[=].item[=].item[=].item[=].text = "Birth Weight"
+* item[=].item[=].item[=].item[=].type = #integer
+* item[=].item[=].item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-unit"
+* item[=].item[=].item[=].item[=].extension[=].valueCoding = $ucum#g "gram"
+* item[=].item[=].item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/minValue"
+* item[=].item[=].item[=].item[=].extension[=].valueInteger = 300
+* item[=].item[=].item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/maxValue"
+* item[=].item[=].item[=].item[=].extension[=].valueInteger = 6000
+
+* item[=].item[=].item[=].item[+].linkId = "4.9.1.7"
+* item[=].item[=].item[=].item[=].text = "Name of Child (if applicable)"
+* item[=].item[=].item[=].item[=].type = #string
+
+* item[=].item[=].item[=].item[+].linkId = "4.9.1.8"
+* item[=].item[=].item[=].item[=].text = "Sex of Child (if applicable)"
+* item[=].item[=].item[=].item[=].type = #string
+
+* item[=].item[+].linkId = "4.10"
+* item[=].item[=].text = "Cervical Screening Test (CST)"
+* item[=].item[=].type = #group
+
+* item[=].item[=].item[0].linkId = "4.10.1"
+* item[=].item[=].item[=].text = "When was your most recent CST (Pap Smear)?"
+* item[=].item[=].item[=].type = #date
+
+* item[=].item[=].item[+].linkId = "4.10.2"
+* item[=].item[=].item[=].text = "What was the result of your most recent CST?"
+* item[=].item[=].item[=].type = #string
+
+* item[=].item[=].item[+].linkId = "4.10.3"
+* item[=].item[=].item[=].text = "Any past abnormal CST(s)? Please provide details"
+* item[=].item[=].item[=].type = #string
+
+* item[=].item[=].item[+].linkId = "4.10.4"
+* item[=].item[=].item[=].text = "If possible, please provide a copy of your most recent screening test(s) results or bring a copy of these results with you on the day of your appointment."
+* item[=].item[=].item[=].type = #display
