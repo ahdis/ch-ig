@@ -112,7 +112,7 @@ Title: "Community-facing Questionnaire"
 * item[=].item[=].answerOption[+].valueCoding = #light "Light"
 
 * item[=].item[+].linkId = "3.6"
-* item[=].item[=].text = "Please assess the intensity of your menstrual bleeding, generally (0-10)"
+* item[=].item[=].text = "Please assess the intensity of your menstrual bleeding, generally (0 = No bleeding at all, 10 = The heaviest possible menstrual bleeding I have ever had)"
 * item[=].item[=].type = #integer
 * item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
 * item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#slider
@@ -160,7 +160,7 @@ Title: "Community-facing Questionnaire"
 * item[=].item[=].answerOption[+].valueCoding = #late-cycle "Late Cycle"
 
 * item[=].item[+].linkId = "3.10"
-* item[=].item[=].text = "To what extent does your period impact your daily activities (0-10)"
+* item[=].item[=].text = "To what extent does your period impact your daily activities (0 = It does not interfere with my daily activities at all, 10 = It completely interferes with my daily activities)"
 * item[=].item[=].type = #integer
 * item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
 * item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#slider
@@ -214,7 +214,7 @@ Title: "Community-facing Questionnaire"
 * item[=].item[=].item[=].answerOption[+].valueCoding = $sct#84638005 "Occasional"
 
 * item[=].item[=].item[+].linkId = "3.12.2"
-* item[=].item[=].item[=].text = "Pain Score (0-10)"
+* item[=].item[=].item[=].text = "Pain Score (0 = Little to no pain, 10 = Severe Pain)"
 * item[=].item[=].item[=].type = #integer
 * item[=].item[=].item[=].enableWhen.question = "3.12.1"
 * item[=].item[=].item[=].enableWhen.operator = #!=
@@ -316,7 +316,7 @@ Title: "Community-facing Questionnaire"
 * item[=].item[=].answerOption[+].valueCoding = $sct#373067005 "No"
 
 * item[=].item[+].linkId = "4.4.1"
-* item[=].item[=].text = "How would you describe this pain on a scale from 1-10?"
+* item[=].item[=].text = "How would you describe this pain on a scale from 1-10? (0 = Little to no pain, 10 = Severe Pain)"
 * item[=].item[=].type = #integer
 * item[=].item[=].enableWhen.question = "4.4"
 * item[=].item[=].enableWhen.operator = #=
@@ -684,6 +684,7 @@ Title: "Community-facing Questionnaire"
 * item[=].item[=].item[+].linkId = "7.4.1"
 * item[=].item[=].item[=].text = "Cardiovascular disease <55 yrs"
 * item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].repeats = false
 * item[=].item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
 * item[=].item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#radio-button
 * item[=].item[=].item[=].answerOption[0].valueCoding = $sct#373066001 "Yes"
