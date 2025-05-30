@@ -442,3 +442,166 @@ Title: "Community-facing Questionnaire"
 * item[=].item[=].item[+].linkId = "4.10.4"
 * item[=].item[=].item[=].text = "If possible, please provide a copy of your most recent screening test(s) results or bring a copy of these results with you on the day of your appointment."
 * item[=].item[=].item[=].type = #display
+
+* item[+].linkId = "5"
+* item[=].text = "ASSOCIATED OR SYSTEMIC SYMPTOMS"
+* item[=].type = #group
+
+* item[=].item[0].linkId = "5.1"
+* item[=].item[=].text = "Do you experience any pelvic pain?"
+* item[=].item[=].type = #choice
+* item[=].item[=].repeats = false
+* item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#radio-button
+* item[=].item[=].answerOption[0].valueCoding = $sct#373066001 "Yes"
+* item[=].item[=].answerOption[+].valueCoding = $sct#373067005 "No"
+
+* item[=].item[+].linkId = "5.1.1"
+* item[=].item[=].text = "Indicate on the scale of 1-10 how you would describe this pain (0 = Little to no pain, 5 = Moderate Pain, 10 = Severe Pain)"
+* item[=].item[=].type = #integer
+* item[=].item[=].enableWhen.question = "5.1"
+* item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].enableWhen.answerCoding = $sct#373066001 // Yes
+* item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#slider
+* item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-sliderStepValue"
+* item[=].item[=].extension[=].valueInteger = 1
+* item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/minValue"
+* item[=].item[=].extension[=].valueInteger = 0
+* item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/maxValue"
+* item[=].item[=].extension[=].valueInteger = 10
+
+* item[=].item[+].linkId = "5.2"
+* item[=].item[=].text = "Have you noticed any abnormal vaginal discharge?"
+* item[=].item[=].type = #choice
+* item[=].item[=].repeats = false
+* item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#radio-button
+* item[=].item[=].answerOption[0].valueCoding = $sct#373066001 "Yes"
+* item[=].item[=].answerOption[+].valueCoding = $sct#373067005 "No"
+
+* item[=].item[+].linkId = "5.2.1"
+* item[=].item[=].text = "Please provide detail"
+* item[=].item[=].type = #string
+* item[=].item[=].enableWhen.question = "5.2"
+* item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].enableWhen.answerCoding = $sct#373066001 // Yes
+
+* item[=].item[+].linkId = "5.3"
+* item[=].item[=].text = "Do you currently have any urinary and/or bowel related concerns?"
+* item[=].item[=].type = #choice
+* item[=].item[=].repeats = false
+* item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#radio-button
+* item[=].item[=].answerOption[0].valueCoding = $sct#373066001 "Yes"
+* item[=].item[=].answerOption[+].valueCoding = $sct#373067005 "No"
+
+* item[=].item[+].linkId = "5.3.1"
+* item[=].item[=].text = "Please provide detail (i.e. motion of passing/incontinence issues etc.)"
+* item[=].item[=].type = #string
+* item[=].item[=].enableWhen.question = "5.3"
+* item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].enableWhen.answerCoding = $sct#373066001 // yes
+
+* item[=].item[+].linkId = "5.4"
+* item[=].item[=].text = "What is your current weight?"
+* item[=].item[=].type = #decimal
+* item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-unit"
+* item[=].item[=].extension[=].valueCoding = $ucum#kg "kilogram"
+* item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/minValue"
+* item[=].item[=].extension[=].valueDecimal = 20.0
+* item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/maxValue"
+* item[=].item[=].extension[=].valueDecimal = 300.0
+
+* item[=].item[+].linkId = "5.5"
+* item[=].item[=].text = "What is your height?"
+* item[=].item[=].type = #integer
+* item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-unit"
+* item[=].item[=].extension[=].valueCoding = $ucum#cm "centimeter"
+* item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/minValue"
+* item[=].item[=].extension[=].valueInteger = 100
+* item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/maxValue"
+* item[=].item[=].extension[=].valueInteger = 250
+
+* item[=].item[+].linkId = "5.6"
+* item[=].item[=].text = "Have you noticed any significant weight loss or gain?"
+* item[=].item[=].type = #choice
+* item[=].item[=].repeats = false
+* item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#radio-button
+* item[=].item[=].answerOption[0].valueCoding = $sct#373066001 "Yes"
+* item[=].item[=].answerOption[+].valueCoding = $sct#373067005 "No"
+
+* item[=].item[+].linkId = "5.6.1"
+* item[=].item[=].text = "Details"
+* item[=].item[=].type = #string
+* item[=].item[=].enableWhen.question = "5.6"
+* item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].enableWhen.answerCoding = $sct#373066001 // Yes
+
+* item[=].item[+].linkId = "5.7"
+* item[=].item[=].text = "Have you had any blood tests done in the past 12 months?"
+* item[=].item[=].type = #choice
+* item[=].item[=].repeats = false
+* item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#radio-button
+* item[=].item[=].answerOption[0].valueCoding = $sct#373066001 "Yes"
+* item[=].item[=].answerOption[+].valueCoding = $sct#373067005 "No"
+
+* item[=].item[+].linkId = "5.7.1"
+* item[=].item[=].text = "Date of most recent test"
+* item[=].item[=].type = #date
+* item[=].item[=].enableWhen.question = "5.7"
+* item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].enableWhen.answerCoding = $sct#373066001
+
+* item[=].item[+].linkId = "5.7.2"
+* item[=].item[=].text = "Pathology Provider"
+* item[=].item[=].type = #string
+* item[=].item[=].enableWhen.question = "5.7"
+* item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].enableWhen.answerCoding = $sct#373066001
+
+* item[=].item[+].linkId = "5.7.3"
+* item[=].item[=].text = "Any clinically significant blood results & outcomes?"
+* item[=].item[=].type = #string
+* item[=].item[=].enableWhen.question = "5.7"
+* item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].enableWhen.answerCoding = $sct#373066001
+
+* item[=].item[+].linkId = "5.8"
+* item[=].item[=].text = "Have you had any medical imaging (i.e. Ultrasound, MRI - of pelvis/abdomen) done in the past 12 months?"
+* item[=].item[=].type = #choice
+* item[=].item[=].repeats = false
+* item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#radio-button
+* item[=].item[=].answerOption[0].valueCoding = $sct#373066001 "Yes"
+* item[=].item[=].answerOption[+].valueCoding = $sct#373067005 "No"
+
+* item[=].item[+].linkId = "5.8.1"
+* item[=].item[=].text = "Please provide the following imaging details"
+* item[=].item[=].type = #group
+* item[=].item[=].repeats = true
+* item[=].item[=].enableWhen.question = "5.8"
+* item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].enableWhen.answerCoding = $sct#373066001
+
+* item[=].item[=].item[0].linkId = "5.8.1.1"
+* item[=].item[=].item[=].text = "Type of Imaging"
+* item[=].item[=].item[=].type = #string
+
+* item[=].item[=].item[+].linkId = "5.8.1.2"
+* item[=].item[=].item[=].text = "Date"
+* item[=].item[=].item[=].type = #date
+
+* item[=].item[=].item[+].linkId = "5.8.1.3"
+* item[=].item[=].item[=].text = "Imaging Provider & Location"
+* item[=].item[=].item[=].type = #string
+
+* item[=].item[=].item[+].linkId = "5.8.1.4"
+* item[=].item[=].item[=].text = "Clinical Reason"
+* item[=].item[=].item[=].type = #string
+
+* item[=].item[=].item[+].linkId = "5.8.1.5"
+* item[=].item[=].item[=].text = "Results / Findings"
+* item[=].item[=].item[=].type = #string
