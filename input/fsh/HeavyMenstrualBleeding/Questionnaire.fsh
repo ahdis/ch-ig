@@ -864,3 +864,252 @@ Title: "Community-facing Questionnaire"
 * item[=].item[=].item[+].linkId = "9.1.3"
 * item[=].item[=].item[=].text = "Details (Surgeon, Type of Procedure, any complications or issues?, findings)"
 * item[=].item[=].item[=].type = #string
+
+* item[+].linkId = "10"
+* item[=].text = "MENOPAUSE"
+* item[=].type = #group
+
+* item[=].item[0].linkId = "10.1"
+* item[=].item[=].text = "Does this section apply to you (menopausal or perimenopausal)?"
+* item[=].item[=].type = #choice
+* item[=].item[=].required = true
+* item[=].item[=].answerOption[0].valueCoding = $sct#373066001 "Yes"
+* item[=].item[=].answerOption[+].valueCoding = $sct#373067005 "No"
+* item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#radio-button
+
+* item[=].item[+].linkId = "10.1.1"
+* item[=].item[=].text = "On the Modified Greene Scale below, judge the severity of your symptoms and record the score."
+* item[=].item[=].type = #group
+* item[=].item[=].enableWhen[0].question = "10.1"
+* item[=].item[=].enableWhen[=].operator = #=
+* item[=].item[=].enableWhen[=].answerCoding = $sct#373066001 // "Yes"
+
+* item[=].item[=].item[0].linkId = "10.1.1.1"
+* item[=].item[=].item[=].text = "Hot flushes"
+* item[=].item[=].item[=].code = $sct#198436008 "Menopausal flushing (finding)"
+* item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].answerOption[0].valueCoding = #0 "None"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #1 "Mild"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #2 "Moderate"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #3 "Severe"
+* item[=].item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#radio-button
+
+* item[=].item[=].item[+].linkId = "10.1.1.2"
+* item[=].item[=].item[=].text = "Lightheaded feelings"
+* item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].answerOption[0].valueCoding = #0 "None"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #1 "Mild"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #2 "Moderate"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #3 "Severe"
+* item[=].item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#radio-button
+
+* item[=].item[=].item[+].linkId = "10.1.1.3"
+* item[=].item[=].item[=].text = "Headaches"
+* item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].answerOption[0].valueCoding = #0 "None"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #1 "Mild"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #2 "Moderate"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #3 "Severe"
+* item[=].item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#radio-button
+
+* item[=].item[=].item[+].linkId = "10.1.1.4"
+* item[=].item[=].item[=].text = "Irritability"
+* item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].answerOption[0].valueCoding = #0 "None"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #1 "Mild"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #2 "Moderate"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #3 "Severe"
+* item[=].item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#radio-button
+
+* item[=].item[=].item[+].linkId = "10.1.1.5"
+* item[=].item[=].item[=].text = "Depression"
+* item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].answerOption[0].valueCoding = #0 "None"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #1 "Mild"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #2 "Moderate"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #3 "Severe"
+* item[=].item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#radio-button
+
+* item[=].item[=].item[+].linkId = "10.1.1.6"
+* item[=].item[=].item[=].text = "Unloved feelings"
+* item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].answerOption[0].valueCoding = #0 "None"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #1 "Mild"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #2 "Moderate"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #3 "Severe"
+* item[=].item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#radio-button
+
+* item[=].item[=].item[+].linkId = "10.1.1.7"
+* item[=].item[=].item[=].text = "Anxiety"
+* item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].answerOption[0].valueCoding = #0 "None"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #1 "Mild"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #2 "Moderate"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #3 "Severe"
+* item[=].item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#radio-button
+
+* item[=].item[=].item[+].linkId = "10.1.1.8"
+* item[=].item[=].item[=].text = "Mood changes"
+* item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].answerOption[0].valueCoding = #0 "None"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #1 "Mild"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #2 "Moderate"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #3 "Severe"
+* item[=].item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#radio-button
+
+* item[=].item[=].item[+].linkId = "10.1.1.9"
+* item[=].item[=].item[=].text = "Sleeplessness"
+* item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].answerOption[0].valueCoding = #0 "None"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #1 "Mild"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #2 "Moderate"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #3 "Severe"
+* item[=].item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#radio-button
+
+* item[=].item[=].item[+].linkId = "10.1.1.10"
+* item[=].item[=].item[=].text = "Unusual tiredness"
+* item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].answerOption[0].valueCoding = #0 "None"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #1 "Mild"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #2 "Moderate"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #3 "Severe"
+* item[=].item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#radio-button
+
+* item[=].item[=].item[+].linkId = "10.1.1.11"
+* item[=].item[=].item[=].text = "Backache"
+* item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].answerOption[0].valueCoding = #0 "None"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #1 "Mild"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #2 "Moderate"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #3 "Severe"
+* item[=].item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#radio-button
+
+* item[=].item[=].item[+].linkId = "10.1.1.12"
+* item[=].item[=].item[=].text = "Joint pains"
+* item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].answerOption[0].valueCoding = #0 "None"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #1 "Mild"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #2 "Moderate"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #3 "Severe"
+* item[=].item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#radio-button
+
+* item[=].item[=].item[+].linkId = "10.1.1.13"
+* item[=].item[=].item[=].text = "Muscle pains"
+* item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].answerOption[0].valueCoding = #0 "None"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #1 "Mild"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #2 "Moderate"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #3 "Severe"
+* item[=].item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#radio-button
+
+* item[=].item[=].item[+].linkId = "10.1.1.14"
+* item[=].item[=].item[=].text = "New facial hair"
+* item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].answerOption[0].valueCoding = #0 "None"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #1 "Mild"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #2 "Moderate"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #3 "Severe"
+* item[=].item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#radio-button
+
+* item[=].item[=].item[+].linkId = "10.1.1.15"
+* item[=].item[=].item[=].text = "Dry skin"
+* item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].answerOption[0].valueCoding = #0 "None"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #1 "Mild"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #2 "Moderate"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #3 "Severe"
+* item[=].item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#radio-button
+
+* item[=].item[=].item[+].linkId = "10.1.1.16"
+* item[=].item[=].item[=].text = "Crawling feelings under the skin"
+* item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].answerOption[0].valueCoding = #0 "None"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #1 "Mild"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #2 "Moderate"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #3 "Severe"
+* item[=].item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#radio-button
+
+* item[=].item[=].item[+].linkId = "10.1.1.17"
+* item[=].item[=].item[=].text = "Less sexual feelings"
+* item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].answerOption[0].valueCoding = #0 "None"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #1 "Mild"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #2 "Moderate"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #3 "Severe"
+* item[=].item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#radio-button
+
+* item[=].item[=].item[+].linkId = "10.1.1.18"
+* item[=].item[=].item[=].text = "Dry vagina"
+* item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].answerOption[0].valueCoding = #0 "None"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #1 "Mild"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #2 "Moderate"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #3 "Severe"
+* item[=].item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#radio-button
+
+* item[=].item[=].item[+].linkId = "10.1.1.19"
+* item[=].item[=].item[=].text = "Uncomfortable intercourse"
+* item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].answerOption[0].valueCoding = #0 "None"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #1 "Mild"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #2 "Moderate"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #3 "Severe"
+* item[=].item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#radio-button
+
+* item[=].item[=].item[+].linkId = "10.1.1.20"
+* item[=].item[=].item[=].text = "Urinary frequency changes"
+* item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].answerOption[0].valueCoding = #0 "None"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #1 "Mild"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #2 "Moderate"
+* item[=].item[=].item[=].answerOption[+].valueCoding = #3 "Severe"
+* item[=].item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#radio-button
+
+* item[+].linkId = "11"
+* item[=].text = "OTHER NOTES"
+* item[=].type = #group
+
+* item[=].item[0].linkId = "11.1"
+* item[=].item[=].text = "Please use the space below to let us know of anything else we can do or need to note to best support your health journey"
+* item[=].item[=].type = #text
