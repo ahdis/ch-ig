@@ -56,5 +56,6 @@ parameters:
   path-resource:
     - input/resources
   special-url:
-    - https://simplifier.net/guide/hmb-fhir-ig/StructureDefinition/community-facing-questionnaire
+    - https://simplifier.net/guide/hmb-fhir-ig/Questionnaire/community-facing-questionnaire
+    - https://simplifier.net/guide/hmb-fhir-ig/Questionnaire/specialist-referral-questionnaire
     - https://simplifier.net/guide/hmb-fhir-ig/ValueSet/medical-conditions

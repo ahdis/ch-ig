@@ -2,7 +2,7 @@ Instance: CommunityFacingQuestionnaireResponseFlorenceBennett
 InstanceOf: QuestionnaireResponse
 Usage: #example
 Title: "Community-facing QR Florence Bennett"
-* questionnaire = "https://simplifier.net/guide/hmb-fhir-ig/StructureDefinition/community-facing-questionnaire"
+* questionnaire = "https://simplifier.net/guide/hmb-fhir-ig/Questionnaire/community-facing-questionnaire"
 * status = #in-progress
 
 // -------------------------------- 1. Group: Personal Information -------------------------------- //

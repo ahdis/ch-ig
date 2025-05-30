@@ -3,7 +3,7 @@ InstanceOf: Questionnaire
 Usage: #example
 Title: "Community-facing Questionnaire"
 * meta.profile = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
-* url = "https://simplifier.net/guide/hmb-fhir-ig/StructureDefinition/community-facing-questionnaire"
+* url = "https://simplifier.net/guide/hmb-fhir-ig/Questionnaire/community-facing-questionnaire"
 * name = "CommunityFacingQuestionnaire"
 * title = "Community-facing Questionnaire"
 * status = #draft
