@@ -112,7 +112,7 @@ Title: "Community-facing Questionnaire"
 * item[=].item[=].answerOption[+].valueCoding = #light "Light"
 
 * item[=].item[+].linkId = "3.6"
-* item[=].item[=].text = "Please assess the intensity of your menstrual bleeding, generally"
+* item[=].item[=].text = "Please assess the intensity of your menstrual bleeding, generally (0-10)"
 * item[=].item[=].type = #integer
 * item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
 * item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#slider
@@ -160,7 +160,7 @@ Title: "Community-facing Questionnaire"
 * item[=].item[=].answerOption[+].valueCoding = #late-cycle "Late Cycle"
 
 * item[=].item[+].linkId = "3.10"
-* item[=].item[=].text = "To what extent does your period impact your daily activities"
+* item[=].item[=].text = "To what extent does your period impact your daily activities (0-10)"
 * item[=].item[=].type = #integer
 * item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
 * item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#slider
@@ -199,73 +199,81 @@ Title: "Community-facing Questionnaire"
 * item[=].item[=].item[=].answerOption[0].valueCoding = $sct#373066001 "Yes"
 * item[=].item[=].item[=].answerOption[+].valueCoding = $sct#373067005 "No"
 
-/*
+* item[=].item[+].linkId = "3.12"
+* item[=].item[=].text = "Period Pain"
+* item[=].item[=].type = #group
 
-* item[+].linkId = "period-pain"
-* item[=].text = "Period Pain"
-* item[=].type = #group
-* item[=].item[0].linkId = "has-period-pain"
-* item[=].item[=].text = "Do you have period pain?"
-* item[=].item[=].type = #choice
-* item[=].item[=].answerOption[0].valueCoding = #yes "Yes"
-* item[=].item[=].answerOption[+].valueCoding = #no "No"
-* item[=].item[=].answerOption[+].valueCoding = #occasionally "Occasionally"
-* item[=].item[+].linkId = "pain-score"
-* item[=].item[=].text = "Pain Score (0-10)"
-* item[=].item[=].type = #integer
-* item[=].item[=].enableWhen.question = "has-period-pain"
-* item[=].item[=].enableWhen.operator = #!=
-* item[=].item[=].enableWhen.answerCoding.code = #no
-* item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/minValue"
-* item[=].item[=].extension[=].valueInteger = 0
-* item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/maxValue"
-* item[=].item[=].extension[=].valueInteger = 10
-* item[=].item[+].linkId = "pain-started-age"
-* item[=].item[=].text = "How old were you when your periods became painful?"
-* item[=].item[=].type = #integer
-* item[=].item[=].enableWhen.question = "has-period-pain"
-* item[=].item[=].enableWhen.operator = #!=
-* item[=].item[=].enableWhen.answerCoding.code = #no
-* item[=].item[+].linkId = "pain-days-per-month"
-* item[=].item[=].text = "How many days each month do you have period pain for?"
-* item[=].item[=].type = #integer
-* item[=].item[=].enableWhen.question = "has-period-pain"
-* item[=].item[=].enableWhen.operator = #!=
-* item[=].item[=].enableWhen.answerCoding.code = #no
-* item[=].item[+].linkId = "pain-locations"
+* item[=].item[=].item[0].linkId = "3.12.1"
+* item[=].item[=].item[=].text = "Do you have period pain?"
+* item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].repeats = false
+* item[=].item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#radio-button
+* item[=].item[=].item[=].answerOption[0].valueCoding = $sct#373066001 "Yes"
+* item[=].item[=].item[=].answerOption[+].valueCoding = $sct#373067005 "No"
+* item[=].item[=].item[=].answerOption[+].valueCoding = $sct#84638005 "Occasional"
+
+* item[=].item[=].item[+].linkId = "3.12.2"
+* item[=].item[=].item[=].text = "Pain Score (0-10)"
+* item[=].item[=].item[=].type = #integer
+* item[=].item[=].item[=].enableWhen.question = "3.12.1"
+* item[=].item[=].item[=].enableWhen.operator = #!=
+* item[=].item[=].item[=].enableWhen.answerCoding = $sct#373067005 "No"
+* item[=].item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#slider
+* item[=].item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-sliderStepValue"
+* item[=].item[=].item[=].extension[=].valueInteger = 1
+* item[=].item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/minValue"
+* item[=].item[=].item[=].extension[=].valueInteger = 0
+* item[=].item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/maxValue"
+* item[=].item[=].item[=].extension[=].valueInteger = 10
+
+* item[=].item[=].item[+].linkId = "3.12.3"
+* item[=].item[=].item[=].text = "How old were you when your periods became painful?"
+* item[=].item[=].item[=].type = #integer
+* item[=].item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-unit"
+* item[=].item[=].item[=].extension[=].valueCoding = $ucum#a "year"
+* item[=].item[=].item[=].enableWhen.question = "3.12.1"
+* item[=].item[=].item[=].enableWhen.operator = #!=
+* item[=].item[=].item[=].enableWhen.answerCoding = $sct#373067005 "No"
+
+* item[=].item[=].item[+].linkId = "3.12.4"
+* item[=].item[=].item[=].text = "How many days each month do you have period pain for?"
+* item[=].item[=].item[=].type = #integer
+* item[=].item[=].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-unit"
+* item[=].item[=].item[=].extension[=].valueCoding = $ucum#d "day"
+* item[=].item[=].item[=].enableWhen.question = "3.12.1"
+* item[=].item[=].item[=].enableWhen.operator = #!=
+* item[=].item[=].item[=].enableWhen.answerCoding = $sct#373067005 "No"
+
+* item[=].item[+].linkId = "3.13"
 * item[=].item[=].text = "Where do you feel your period pain?"
 * item[=].item[=].type = #choice
 * item[=].item[=].repeats = true
-* item[=].item[=].enableWhen.question = "has-period-pain"
+* item[=].item[=].enableWhen.question = "3.12.1"
 * item[=].item[=].enableWhen.operator = #!=
-* item[=].item[=].enableWhen.answerCoding.code = #no
-* item[=].item[=].answerValueSet = "http://womenshealthroad.com.au/fhir/ValueSet/pain-locations"
-* item[=].item[+].linkId = "pain-location-other"
-* item[=].item[=].text = "Other pain location (please specify)"
+* item[=].item[=].enableWhen.answerCoding = $sct#373067005 "No"
+* item[=].item[=].answerValueSet = "https://simplifier.net/guide/hmb-fhir-ig/ValueSet/period-pain-body-sites"
+
+* item[=].item[+].linkId = "3.13.1"
+* item[=].item[=].text = "Other (please specify)"
 * item[=].item[=].type = #string
-* item[=].item[=].enableWhen.question = "has-period-pain"
-* item[=].item[=].enableWhen.operator = #!=
-* item[=].item[=].enableWhen.answerCoding.code = #no
-* item[=].item[+].linkId = "pain-medication-help"
-* item[=].item[=].text = "Do period pain medications (ibuprofen, Ponstan, Naprogesic etc.) help your period pain?"
+* item[=].item[=].enableWhen.question = "3.13"
+* item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].enableWhen.answerCoding = $sct#74964007 // code for "Other" from ValueSet/period-pain-body-sites
+
+* item[=].item[+].linkId = "3.14"
+* item[=].item[=].text = "Do period pain medications (Ibuprofen, Ponstan, Naprogesic etc.) help your period pain?"
 * item[=].item[=].type = #choice
-* item[=].item[=].enableWhen.question = "has-period-pain"
+* item[=].item[=].repeats = false
+* item[=].item[=].enableWhen.question = "3.12.1"
 * item[=].item[=].enableWhen.operator = #!=
-* item[=].item[=].enableWhen.answerCoding.code = #no
+* item[=].item[=].enableWhen.answerCoding = $sct#373067005 "No"
 * item[=].item[=].answerOption[0].valueCoding = #yes "Yes"
 * item[=].item[=].answerOption[+].valueCoding = #little "A little"
 * item[=].item[=].answerOption[+].valueCoding = #not-at-all "Not at all"
 * item[=].item[=].answerOption[+].valueCoding = #never-tried "I have never tried these medications"
 
-* item[+].linkId = "family-history"
-* item[=].text = "Family History"
+* item[+].linkId = "4"
+* item[=].text = "SEXUAL AND REPRODUCTIVE HISTORY"
 * item[=].type = #group
-* item[=].item[0].linkId = "family-history-conditions"
-* item[=].item[=].text = "Please check any family history conditions that apply:"
-* item[=].item[=].type = #choice
-* item[=].item[=].repeats = true
-* item[=].item[=].answerValueSet = "http://womenshealthroad.com.au/fhir/ValueSet/family-history-conditions"
-* item[=].item[+].linkId = "family-history-details"
-* item[=].item[=].text = "If you answered 'Yes' to any of the above, please provide detail (i.e. date & age at diagnosis, outcome of diagnosis, type of cancer etc.)"
-* item[=].item[=].type = #text
-*/

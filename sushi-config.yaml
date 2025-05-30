@@ -57,3 +57,4 @@ parameters:
     - https://simplifier.net/guide/hmb-fhir-ig/Questionnaire/community-facing-questionnaire
     - https://simplifier.net/guide/hmb-fhir-ig/Questionnaire/specialist-referral-questionnaire
     - https://simplifier.net/guide/hmb-fhir-ig/ValueSet/medical-conditions
+    - https://simplifier.net/guide/hmb-fhir-ig/ValueSet/period-pain-body-sites
