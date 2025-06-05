@@ -12,11 +12,11 @@ status: draft
 license: CC0-1.0
 copyright: CC0-1.0
 jurisdiction: urn:iso:std:iso:3166#CHE
-date: 2024-08-20
-version: 1.2.2
+date: 2025-06-05
+version: 1.2.3 # 1.2.2 published in May 2025
 fhirVersion: 4.0.1
 copyrightYear: 2024+
-releaseLabel: draft # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
+releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 publisher:
   name: HL7 Switzerland
 contact:
@@ -26,7 +26,7 @@ contact:
         value: https://www.hl7.ch/
 
 dependencies:
-  ch.fhir.ig.ch-core: 5.0.0
+  ch.fhir.ig.ch-core: 6.0.0-ballot
 
 pages:
   index.md:
@@ -52,5 +52,14 @@ parameters:
   excludettl: true
   allow-extensible-warnings: true
   display-warnings: true 
+  path-expansion-params: '../../expansion-params.json'  # for using SNOMED CT Swiss Extension
+  pin-canonicals: pin-multiples
   path-resource:
-    - input/resources
+    - input/resources  
+
+FSHOnly: false
+applyExtensionMetadataToRoot: false
+instanceOptions:
+  setMetaProfile: always
+  setId: always
+  manualSliceOrdering: true
