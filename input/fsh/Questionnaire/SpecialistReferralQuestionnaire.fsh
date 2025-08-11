@@ -1,9 +1,9 @@
-Instance: SpecialistReferralQuestionnaire
+Instance: specialist-referral-questionnaire
 InstanceOf: Questionnaire
 Usage: #example
 Title: "Specialist Referral Questionnaire"
 * meta.profile = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
-* url = "https://simplifier.net/guide/hmb-fhir-ig/Questionnaire/specialist-referral-questionnaire"
+* url = "http://fhir.ch/ig/ch-ig/Questionnaire/specialist-referral-questionnaire"
 * name = "SpecialistReferralQuestionnaire"
 * title = "Specialist Referral Questionnaire"
 * status = #draft

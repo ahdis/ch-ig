@@ -12,11 +12,11 @@ status: draft
 license: CC0-1.0
 copyright: CC0-1.0
 jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001
-date: 2024-08-20
+date: 2025-08-11
 version: 0.1.0
 fhirVersion: 4.0.1
 copyrightYear: 2024+
-releaseLabel: draft # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
+releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 publisher:
   name: HL7 Switzerland
 contact:
@@ -26,7 +26,6 @@ contact:
         value: https://www.hl7.ch/
 
 dependencies:
-  ch.fhir.ig.ch-core: 5.0.0
   hl7.fhir.uv.sdc: 3.0.0
 
 pages:
@@ -38,6 +37,8 @@ pages:
     title: Extensions
   terminology.md:
     title: Terminology
+  changelog.md:
+    title: Changelog  
 
 menu:
   Home: index.html
@@ -53,8 +54,3 @@ parameters:
   excludettl: true
   allow-extensible-warnings: true
   display-warnings: true 
-  special-url:
-    - https://simplifier.net/guide/hmb-fhir-ig/Questionnaire/community-facing-questionnaire
-    - https://simplifier.net/guide/hmb-fhir-ig/Questionnaire/specialist-referral-questionnaire
-    - https://simplifier.net/guide/hmb-fhir-ig/ValueSet/medical-conditions
-    - https://simplifier.net/guide/hmb-fhir-ig/ValueSet/period-pain-body-sites

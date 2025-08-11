@@ -2,7 +2,9 @@ Instance: SpecialistReferralQuestionnaireResponseEmmaClark
 InstanceOf: QuestionnaireResponse
 Usage: #example
 Title: "Specialist Referral QR Emma Clark"
-* questionnaire = "https://simplifier.net/guide/hmb-fhir-ig/Questionnaire/specialist-referral-questionnaire"
+Description: "FHIR QuestionnaireResponse filled out by Emma Clark in order to refer Florence Bennett to a specialist"
+
+* questionnaire = "http://fhir.ch/ig/ch-ig/Questionnaire/specialist-referral-questionnaire"
 * status = #in-progress
 
 // -------------------------------- 1. Group: TBD -------------------------------- //
