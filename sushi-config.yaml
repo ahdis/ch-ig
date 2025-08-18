@@ -31,8 +31,8 @@ dependencies:
 pages:
   index.md:
     title: Home
-#  profiles.md:
-#    title: Profiles
+  profiles.md:
+    title: Profiles
   extensions.md:
     title: Extensions
   terminology.md:
@@ -42,7 +42,7 @@ pages:
 
 menu:
   Home: index.html
-#  Profiles: profiles.html
+  Profiles: profiles.html
   Extensions: extensions.html
   Terminology: terminology.html
   Artifacts: artifacts.html
