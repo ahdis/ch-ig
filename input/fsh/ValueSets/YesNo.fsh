@@ -1,33 +1,30 @@
-Instance: yes-no
-InstanceOf: ValueSet
-Usage: #inline
-* experimental = true
-* status = #draft
+ValueSet: YesNo
+Id: yes-no
+Title: "Yes/No"
+Description: "ValueSet containing codes for yes/no"
+* ^experimental = true
+* ^status = #draft
 
-* compose.include.system = "http://snomed.info/sct"
+* $sct#373066001 "Yes"
+* $sct#373066001 ^designation[0].language = #de
+* $sct#373066001 ^designation[=].value = "Ja"
+* $sct#373066001 ^designation[+].language = #en
+* $sct#373066001 ^designation[=].value = "Yes"
+* $sct#373066001 ^designation[+].language = #es
+* $sct#373066001 ^designation[=].value = "Sí"
+* $sct#373066001 ^designation[+].language = #fr
+* $sct#373066001 ^designation[=].value = "Oui"
+* $sct#373066001 ^designation[+].language = #pt
+* $sct#373066001 ^designation[=].value = "Sim"
 
-* compose.include.concept[0].code = #373066001
-* compose.include.concept[=].display = "Yes"
-* compose.include.concept[=].designation[0].language = #de
-* compose.include.concept[=].designation[=].value = "Ja"
-* compose.include.concept[=].designation[+].language = #en
-* compose.include.concept[=].designation[=].value = "Yes"
-* compose.include.concept[=].designation[+].language = #es
-* compose.include.concept[=].designation[=].value = "Sí"
-* compose.include.concept[=].designation[+].language = #fr
-* compose.include.concept[=].designation[=].value = "Oui"
-* compose.include.concept[=].designation[+].language = #pt
-* compose.include.concept[=].designation[=].value = "Sim"
-
-* compose.include.concept[+].code = #373067005
-* compose.include.concept[=].display = "No"
-* compose.include.concept[=].designation[0].language = #de
-* compose.include.concept[=].designation[=].value = "Nein"
-* compose.include.concept[=].designation[+].language = #en
-* compose.include.concept[=].designation[=].value = "No"
-* compose.include.concept[=].designation[+].language = #es
-* compose.include.concept[=].designation[=].value = "No"
-* compose.include.concept[=].designation[+].language = #fr
-* compose.include.concept[=].designation[=].value = "Non"
-* compose.include.concept[=].designation[+].language = #pt
-* compose.include.concept[=].designation[=].value = "Não"
+* $sct#373067005 "No"
+* $sct#373067005 ^designation[0].language = #de
+* $sct#373067005 ^designation[=].value = "Nein"
+* $sct#373067005 ^designation[+].language = #en
+* $sct#373067005 ^designation[=].value = "No"
+* $sct#373067005 ^designation[+].language = #es
+* $sct#373067005 ^designation[=].value = "No"
+* $sct#373067005 ^designation[+].language = #fr
+* $sct#373067005 ^designation[=].value = "Non"
+* $sct#373067005 ^designation[+].language = #pt
+* $sct#373067005 ^designation[=].value = "Não"
