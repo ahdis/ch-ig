@@ -1,4 +1,4 @@
-CodeSystem: ChIgExample
+CodeSystem: ChIgExampleCS
 Id: ch-ig-example
 Title: "CH IG Example"
 Description: "CH IG Example code system is just an example!"
@@ -10,9 +10,9 @@ Description: "CH IG Example code system is just an example!"
 * #3 "Beispiel 3"
 
 
-ValueSet: ChIgExample
+ValueSet: ChIgExampleVS
 Id: ch-ig-example
 Title: "CH IG Example"
 Description: "CH IG Example value set is just an example!"
 * ^experimental = false
-* include codes from system ChIgExample
+* include codes from system ChIgExampleCS

@@ -5,7 +5,7 @@
   "mode" : "milestone",
   "status" : "trial-use",
   "sequence" : "STU",
-  "desc" : "first publication",
+  "desc" : "Template for HL7.ch FHIR Implementation Guides",
   "changes" : "index.html",
   "first": false
 }

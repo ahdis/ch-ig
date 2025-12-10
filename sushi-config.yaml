@@ -7,12 +7,12 @@ id: ch.fhir.ig.ch-ig
 canonical: http://fhir.ch/ig/ch-ig
 name: CH_IG
 title: "CH IG (R4)"
-description: Implementation Guide CH IG (R4) for ...
+description: Template for HL7.ch FHIR Implementation Guides
 status: draft
 license: CC0-1.0
 copyright: CC0-1.0
 jurisdiction: urn:iso:std:iso:3166#CHE
-date: 2025-06-05
+date: 2025-12-10
 version: 1.2.3 # 1.2.2 published in May 2025
 fhirVersion: 4.0.1
 copyrightYear: 2024+
@@ -26,10 +26,10 @@ contact:
         value: https://www.hl7.ch/
 
 dependencies:
-  hl7.terminology.r4: 
-    uri: http://terminology.hl7.org/ImplementationGuide/hl7.terminology
-    version: 6.4.0 
-  ch.fhir.ig.ch-core: 6.0.0-ballot
+  #hl7.terminology.r4: 
+  #  uri: http://terminology.hl7.org/ImplementationGuide/hl7.terminology
+  #  version: 6.4.0 
+  ch.fhir.ig.ch-core: current
   hl7.fhir.extensions.r5: 4.0.1
 # Extensions for converting between versions: https://build.fhir.org/versions.html#extensions
 # FHIR Cross-Version Mapping Pack: https://build.fhir.org/ig/HL7/fhir-cross-version/
