@@ -27,8 +27,8 @@ You can embed [instance fragments](https://build.fhir.org/ig/FHIR/ig-guidance/fr
 <div>{% include dependencies-igs.svg %}</div>
 
 ### Multi-Language Support
-
-Zulip Channel [Multi-lingual IGs](https://chat.fhir.org/#narrow/channel/380308-Multi-lingual-IGs)
+- Zulip Channel [Multi-lingual IGs](https://chat.fhir.org/#narrow/channel/380308-Multi-lingual-IGs)
+- [Producing Multi-Language IGs](https://build.fhir.org/ig/FHIR/ig-guidance/languages.html)
 
 TODO
 
