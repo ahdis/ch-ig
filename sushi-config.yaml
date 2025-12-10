@@ -44,9 +44,9 @@ pages:
     title: Extensions
   terminology.md:
     title: Terminology
-  composition-search.html: 
+  composition-search.xml: 
     title: Composition Registry  
-  composition.html: 
+  composition.xml: 
     title: Composition
 
 menu:
