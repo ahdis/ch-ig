@@ -1,7 +1,7 @@
 Profile: ChIgPractitioner
-Parent: $ChCorePractitioner
+Parent: CHCorePractitioner
 Id: ch-ig-practitioner
 Title: "CH IG Practitioner"
-Description: "CH IG Practitioner profile is just an example!"
+Description: "Example profile defining a Practitioner resource."
 * . ^short = "CH IG Practitioner"
 

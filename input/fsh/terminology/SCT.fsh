@@ -1,7 +1,7 @@
-ValueSet: ChIgExampleSct
-Id: ch-ig-example-sct
-Title: "CH IG Example SNOMED CT"
-Description: "CH IG Example SNOMED CT value set is just an other example!"
+ValueSet: SctVS
+Id: sct
+Title: "CH IG SNOMED CT"
+Description: "Example value set including SNOMED CT codes from the international and the Swiss edition."
 * ^experimental = false
 
 // SCT international

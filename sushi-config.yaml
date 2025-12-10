@@ -52,15 +52,17 @@ menu:
   Terminology: terminology.html
   Artifacts: artifacts.html
 
-#resources:
-#  Encounter/xver-encounter-r4:
-#    name: xver Encounter R4
-#    description: An example Encounter using a backport extension for a new introduced resource element in R5 (Encounter.subjectStatus)
-#    exampleBoolean: true
+resources:
+  Encounter/xver-encounter-r4:
+    name: Cross-Version Encounter R4
+    description: Example for CH IG Encounter using a backport extension for a new introduced resource element in R5 (Encounter.subjectStatus).
+    exampleBoolean: true
+    profile:
+      - http://fhir.ch/ig/ch-ig/StructureDefinition/ch-ig-encounter
 
 # Parameters
-# Core FHIR: http://build.fhir.org/codesystem-guide-parameter-code.html
-# FHIR Tools IG: http://build.fhir.org/ig/FHIR/fhir-tools-ig/branches/master/CodeSystem-ig-parameters.html
+  # Core FHIR: http://build.fhir.org/codesystem-guide-parameter-code.html
+  # FHIR Tools IG: http://build.fhir.org/ig/FHIR/fhir-tools-ig/branches/master/CodeSystem-ig-parameters.html
 parameters:
   excludettl: true
   allow-extensible-warnings: true
