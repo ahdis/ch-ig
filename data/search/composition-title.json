@@ -1,0 +1,15 @@
+{
+  "resourceType": "SearchParameter",
+  "id": "Composition-title",
+  "url": "http://hl7.org/fhir/SearchParameter/Composition-title",
+  "title" : "Title",
+  "version": "4.0.1",
+  "description": "e.g. Catalog Test 1",
+  "code": "title",
+  "base": [
+    "Composition"
+  ],
+  "type": "string",
+  "expression": "Composition.title",
+  "xpathUsage": "normal"
+}

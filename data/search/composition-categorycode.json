@@ -1,0 +1,15 @@
+{
+  "resourceType": "SearchParameter",
+  "id": "Composition-categorycode",
+  "url": "http://hl7.org/fhir/SearchParameter/Composition-categorycode",
+  "title" : "CategoryCode",
+  "version": "4.0.1",
+  "description": "e.g. 1",
+  "code": "categoryCode",
+  "base": [
+    "Composition"
+  ],
+  "type": "string",
+  "expression": "Composition.category.coding.code",
+  "xpathUsage": "normal"
+}

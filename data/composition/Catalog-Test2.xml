@@ -1,0 +1,31 @@
+<Composition xmlns="http://hl7.org/fhir">
+  <id value="Catalog-Test2" />
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/catalog" />
+  </meta>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqm-ValidityPeriod">
+    <valueDateTime value="2025-12-10" />
+  </extension>
+  <status value="final" />
+  <type>
+    <text value="Catalog" />
+  </type>
+  <category>
+    <coding>
+      <system value="http://example.com/CodeSystem/catalogType" />
+      <code value="2" />
+      <display value="Test 2" />
+    </coding>
+  </category>
+  <date value="2025-12-10" />
+  <author>
+    <display value="Test AG" />
+  </author>
+  <title value="Catalog Test 2" />
+  <section>
+    <entry>
+      <!--<reference value="CatalogEntry/CatalogEntry-Test2" />-->
+      <display value="CatalogEntry Test 2" />
+    </entry>
+  </section>
+</Composition>

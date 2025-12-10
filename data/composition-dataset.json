@@ -1,0 +1,10 @@
+{
+  "name" : "compositions",
+  "searches" : ["data/search/composition-title.json", "data/search/composition-categorycode.json"],
+  "parameters" : ["title", "categoryCode"],
+  "primaryColumn" : "title",
+  "columns" : ["title", "categoryCode"],
+  "source" : "data/composition",
+  "detail" : "composition.md",
+  "resourceType" : "Composition"
+}
