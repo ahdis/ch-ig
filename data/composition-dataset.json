@@ -5,6 +5,6 @@
   "primaryColumn" : "title",
   "columns" : ["title", "categoryCode"],
   "source" : "data/composition",
-  "detail" : "composition.md",
+  "detail" : "composition.html",
   "resourceType" : "Composition"
 }
