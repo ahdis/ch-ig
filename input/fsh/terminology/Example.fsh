@@ -1,6 +1,6 @@
 ValueSet: DesignationsVS
 Id: example
-Title: "CH IG Designations"
+Title: "CH IG Designations VS"
 Description: "Example value set including all codes from the designations code system."
 * ^experimental = false
 * include codes from system DesignationsCS
@@ -8,7 +8,7 @@ Description: "Example value set including all codes from the designations code s
 
 CodeSystem: DesignationsCS
 Id: example
-Title: "CH IG Designations"
+Title: "CH IG Designations CS"
 Description: "Example code system including own defined codes with multilingual designations."
 * ^experimental = false
 * ^caseSensitive = true

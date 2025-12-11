@@ -4,7 +4,9 @@ The source is available in the [GitHub Repository](https://github.com/ahdis/ch-i
 
 For detailed instructions and best practice approaches for developing implementation guides, see the [Guidance](guidance.html) page.
 
-<span style="color: red;"><em>✂️ Template starts here - delete everything above for your own IG ✂️</em></span>
+<span style="color: red;"><em>✂️ Template starts here - delete the informative part above for your own IG ✂️</em></span>
+
+---
 
 <div markdown="1" class="stu-note">
 
