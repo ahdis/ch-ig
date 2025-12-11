@@ -10,7 +10,7 @@ For IG authors, the [Guidance for FHIR IG Creation](https://build.fhir.org/ig/FH
 ### Multi-Language Support
 - [Producing Multi-Language IGs](https://build.fhir.org/ig/FHIR/ig-guidance/languages.html)
 - Zulip Channel [Multi-lingual IGs](https://chat.fhir.org/#narrow/channel/380308-Multi-lingual-IGs)
-- https://github.com/FHIR/multi-lang-test-ig/
+- [https://github.com/FHIR/multi-lang-test-ig/](https://github.com/FHIR/multi-lang-test-ig/)
 
 ### Styles for Narrative
 There are defined [styles](https://build.fhir.org/ig/FHIR/ig-guidance/best-practice.html#styles):
@@ -27,7 +27,7 @@ There are defined [styles](https://build.fhir.org/ig/FHIR/ig-guidance/best-pract
 ### Instance Fragments
 You can embed [instance fragments](https://build.fhir.org/ig/FHIR/ig-guidance/fragments.html) within a page:
 
-{% fragment Patient/PetraMeier JSON %}
+{% fragment Practitioner/HansMuster JSON %}
 
 ### Creating Diagrams 
 - [Class Diagrams](https://build.fhir.org/ig/FHIR/ig-guidance/uml.html)
