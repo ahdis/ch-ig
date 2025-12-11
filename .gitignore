@@ -10,3 +10,10 @@ fsh-generated/**
 
 # editing files and folders
 .vscode/**
+
+# Ignore all files in the 'translations' directory
+/translations/*
+
+# Exclude 'input/translations' from being ignored
+!input/translations/
+!input/translations/**
