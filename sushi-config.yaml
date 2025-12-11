@@ -13,10 +13,10 @@ license: CC0-1.0
 copyright: CC0-1.0
 jurisdiction: urn:iso:std:iso:3166#CHE
 date: 2025-12-10
-version: 1.2.3 # 1.2.3 published in December 2025
+version: 1.2.4 # 1.2.3 published in December 2025
 fhirVersion: 4.0.1
 copyrightYear: 2024+
-releaseLabel: draft # ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
+releaseLabel: ci-build # ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 publisher:
   name: HL7 Switzerland
 contact:
@@ -33,6 +33,8 @@ dependencies:
 pages:
   index.md:
     title: Home
+  use-cases.md:
+    title: Use Cases
   guidance.md:
     title: Guidance
   profiles.md:
@@ -43,9 +45,12 @@ pages:
     title: Terminology
   changelog.md:
     title: Changelog  
+  translationinfo.md:
+    title: Translation Information
 
 menu:
   Home: index.html
+  Use Cases: use-cases.html
   Guidance: guidance.html
   Profiles: profiles.html
   Extensions: extensions.html
@@ -71,6 +76,14 @@ parameters:
   pin-canonicals: pin-multiples
   path-resource:
     - input/resources  
+  # multi-lingual support
+  i18n-default-lang: en 
+  i18n-lang: 
+    - de
+    - fr
+  translation-sources:
+    - input/translations/de
+    - input/translations/fr
 
 FSHOnly: false
 applyExtensionMetadataToRoot: false

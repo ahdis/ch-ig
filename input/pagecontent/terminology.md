@@ -1,15 +1,15 @@
 ### ValueSets
 
-{% include list-valuesets.xhtml %}
+{% lang-fragment list-valuesets.xhtml %}
 
 ### CodeSystems
   
-{% include list-codesystems.xhtml %}
+{% lang-fragment list-codesystems.xhtml %}
 
 ### ConceptMaps
 
-{% include list-conceptmaps.xhtml %}
+{% lang-fragment list-conceptmaps.xhtml %}
 
 ### NamingSystems
 
-{% include list-namingsystems.xhtml %}
+{% lang-fragment list-namingsystems.xhtml %}

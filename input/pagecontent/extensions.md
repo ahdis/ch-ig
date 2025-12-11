@@ -1,2 +1,2 @@
 
-{% include list-extensions.xhtml %}
+{% lang-fragment list-extensions.xhtml %}
