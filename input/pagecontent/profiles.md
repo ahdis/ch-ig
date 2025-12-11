@@ -1,6 +1,6 @@
 ### Resource Profiles
 
-{% include list-profiles.xhtml %}
+{% lang-fragment list-profiles.xhtml %}
 
 ### Data Type Profiles
 
