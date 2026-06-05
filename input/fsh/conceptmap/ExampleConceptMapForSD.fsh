@@ -7,8 +7,8 @@ Usage: #definition
 * experimental = false
 
 // sourceUri/targetUri must be ValueSets, not StructureDefinitions (CONCEPTMAP_VS_NOT_A_VS)
-* sourceUri = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient"
-* targetUri = "http://fhir.ch/ig/ch-ig/StructureDefinition/ch-ig-practitioner"
+// * sourceUri = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient"
+// * targetUri = "http://fhir.ch/ig/ch-ig/StructureDefinition/ch-ig-practitioner"
 
 // group.target points to a LOCAL profile, so the narrative link is RELATIVE and gets
 // link-checked (external/dependency targets render as absolute URLs and are NOT checked).
