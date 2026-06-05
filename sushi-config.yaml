@@ -28,7 +28,6 @@ contact:
 dependencies:
   ch.fhir.ig.ch-core: 6.0.0-ballot
   hl7.fhir.extensions.r5: 4.0.1
-  hl7.fhir.uv.xver-r5.r4: 0.0.1-snapshot-2 # https://packages2.fhir.org/packages/
 
 pages:
   index.md:
