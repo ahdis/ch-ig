@@ -1,0 +1,37 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "SctVS",
+  "id": "sct",
+  "title": "CH IG SNOMED CT",
+  "description": "Example value set including SNOMED CT codes from the international and the Swiss edition.",
+  "url": "http://fhir.ch/ig/ch-ig/ValueSet/sct",
+  "experimental": false,
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "736378000",
+            "display": "Medication management plan (record artifact)"
+          },
+          {
+            "code": "721912009",
+            "display": "Medication summary document (record artifact)"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/2011000195101",
+        "concept": [
+          {
+            "code": "82291000195104",
+            "display": "Medication dispense document (record artifact)"
+          }
+        ]
+      }
+    ]
+  }
+}

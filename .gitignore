@@ -4,6 +4,8 @@ output/**
 temp/**
 template/**
 fsh-generated/**
+!fsh-generated/resources/
+!fsh-generated/resources/**
 
 # jar files
 *.jar

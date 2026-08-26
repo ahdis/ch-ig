@@ -1,0 +1,170 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "ch.fhir.ig.ch-ig",
+  "url": "http://fhir.ch/ig/ch-ig/ImplementationGuide/ch.fhir.ig.ch-ig",
+  "version": "1.2.3",
+  "name": "CH_IG",
+  "title": "CH IG (R4)",
+  "status": "draft",
+  "date": "2025-12-10",
+  "publisher": "HL7 Switzerland",
+  "contact": [
+    {
+      "name": "HL7 Switzerland",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.hl7.ch/"
+        }
+      ]
+    }
+  ],
+  "description": "Template for HL7.ch FHIR Implementation Guides",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "CHE",
+          "system": "urn:iso:std:iso:3166"
+        }
+      ]
+    }
+  ],
+  "copyright": "CC0-1.0",
+  "packageId": "ch.fhir.ig.ch-ig",
+  "license": "CC0-1.0",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "dependsOn": [
+    {
+      "packageId": "hl7.fhir.uv.sdc",
+      "version": "4.0.0",
+      "uri": "http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc",
+      "id": "hl7_fhir_uv_sdc"
+    }
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "ValueSet/sct"
+        },
+        "name": "CH IG SNOMED CT",
+        "description": "Example value set including SNOMED CT codes from the international and the Swiss edition.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Immunization/ImmunizationDarContained"
+        },
+        "name": "Immunization with a data-absent-reason dose number",
+        "description": "Immunization whose protocolApplied.doseNumberPositiveInt is a valueless primitive carrying a data-absent-reason, published as a normal example.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Immunization/ImmunizationValueContained"
+        },
+        "name": "Immunization with a positiveInt dose number",
+        "description": "Immunization whose protocolApplied.doseNumberPositiveInt is a plain positiveInt, published as a normal example.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/example"
+        },
+        "name": "Petra Meier",
+        "description": "Example for CH Core Patient.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Questionnaire/QuestionnaireContainedDar"
+        },
+        "name": "Questionnaire containing an Immunization with a data-absent-reason dose number",
+        "description": "The contained Immunization is identical to ImmunizationDarStandalone. Compare the published contained copy with the standalone one.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Questionnaire/QuestionnaireContainedValue"
+        },
+        "name": "Questionnaire containing an Immunization with a positiveInt dose number",
+        "description": "The contained Immunization is identical to ImmunizationValueStandalone. Compare the published contained copy with the standalone one.",
+        "exampleBoolean": true
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Home",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "guidance.html",
+          "title": "Guidance",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "profiles.html",
+          "title": "Profiles",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "extensions.html",
+          "title": "Extensions",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "terminology.html",
+          "title": "Terminology",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "changelog.html",
+          "title": "Changelog",
+          "generation": "markdown"
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2024+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "draft"
+      },
+      {
+        "code": "excludettl",
+        "value": "true"
+      },
+      {
+        "code": "allow-extensible-warnings",
+        "value": "true"
+      },
+      {
+        "code": "display-warnings",
+        "value": "true"
+      },
+      {
+        "code": "path-expansion-params",
+        "value": "../../expansion-params.json"
+      },
+      {
+        "code": "pin-canonicals",
+        "value": "pin-multiples"
+      },
+      {
+        "code": "path-resource",
+        "value": "input/resources"
+      }
+    ]
+  }
+}

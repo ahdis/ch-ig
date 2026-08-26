@@ -1,0 +1,75 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "QuestionnaireContainedDar",
+  "contained": [
+    {
+      "resourceType": "Immunization",
+      "id": "ImmunizationDarContained",
+      "patient": {
+        "reference": "Patient/example"
+      },
+      "protocolApplied": [
+        {
+          "targetDisease": [
+            {
+              "coding": [
+                {
+                  "code": "67924001",
+                  "system": "http://snomed.info/sct",
+                  "display": "Smallpox"
+                }
+              ]
+            }
+          ],
+          "_doseNumberPositiveInt": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "asked-unknown"
+              }
+            ]
+          }
+        }
+      ],
+      "status": "not-done",
+      "vaccineCode": {
+        "coding": [
+          {
+            "code": "1290624003",
+            "system": "http://snomed.info/sct",
+            "display": "Variola virus antigen-containing vaccine product"
+          }
+        ]
+      },
+      "_occurrenceDateTime": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+            "valueCode": "asked-unknown"
+          }
+        ]
+      }
+    }
+  ],
+  "item": [
+    {
+      "extension": [
+        {
+          "extension": [
+            {
+              "url": "template",
+              "valueReference": {
+                "reference": "#ImmunizationDarContained"
+              }
+            }
+          ],
+          "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-templateExtract"
+        }
+      ],
+      "linkId": "q",
+      "text": "Placeholder",
+      "type": "display"
+    }
+  ],
+  "status": "draft"
+}

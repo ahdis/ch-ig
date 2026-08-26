@@ -1,0 +1,36 @@
+{
+  "resourceType": "Patient",
+  "id": "example",
+  "name": [
+    {
+      "given": [
+        "Petra"
+      ],
+      "family": "Meier"
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "+41 79 111 22 33",
+      "use": "home"
+    },
+    {
+      "system": "email",
+      "value": "petra.meier@example.com"
+    }
+  ],
+  "address": [
+    {
+      "line": [
+        "Mustergasse 11"
+      ],
+      "use": "home",
+      "city": "Musterhausen",
+      "postalCode": "1234",
+      "country": "Schweiz"
+    }
+  ],
+  "gender": "female",
+  "birthDate": "1985-07-23"
+}

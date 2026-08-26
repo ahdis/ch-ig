@@ -40,6 +40,7 @@ RuleSet: ImmunizationCommon
 // ---------------------------------------------------------------------------------------------
 Instance: ImmunizationDarContained
 InstanceOf: Immunization
+Usage: #example
 Title: "Immunization with a data-absent-reason dose number"
 Description: "Immunization whose protocolApplied.doseNumberPositiveInt is a valueless primitive carrying a data-absent-reason, published as a normal example."
 * insert ImmunizationCommon
@@ -47,6 +48,7 @@ Description: "Immunization whose protocolApplied.doseNumberPositiveInt is a valu
 
 Instance: ImmunizationValueContained
 InstanceOf: Immunization
+Usage: #example
 Title: "Immunization with a positiveInt dose number"
 Description: "Immunization whose protocolApplied.doseNumberPositiveInt is a plain positiveInt, published as a normal example."
 * insert ImmunizationCommon
