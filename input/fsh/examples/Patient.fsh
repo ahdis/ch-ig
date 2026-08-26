@@ -1,10 +1,8 @@
-Instance: PetraMeier
-InstanceOf: CHCorePatient
+Instance: example
+InstanceOf: Patient
 Usage: #example
 Title: "Petra Meier"
 Description: "Example for CH Core Patient."
-* identifier[insuranceCardNumber].system = "urn:oid:2.16.756.5.30.1.123.100.1.1.1"
-* identifier[insuranceCardNumber].value = "80756015090002647590"
 * name
   * family = "Meier"
   * given = "Petra"
@@ -20,4 +18,3 @@ Description: "Example for CH Core Patient."
 * address[=].city = "Musterhausen"
 * address[=].postalCode = "1234"
 * address[=].country = "Schweiz"
-* generalPractitioner.reference = "Practitioner/HansMuster"
