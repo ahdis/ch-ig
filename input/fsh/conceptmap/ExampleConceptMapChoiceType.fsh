@@ -45,6 +45,8 @@ InstanceOf: ConceptMap
 Title: "Example ConceptMap with choice type target codes"
 Description: "Illustrates the unresolved narrative links for target element ids containing [x] (anchor on the profile page is _x_) and the 'todo' placeholder in the Type columns."
 Usage: #definition
+// with a name, the Mappings tab of the logical model renders a table (see ExampleConceptMapMappingsTab.fsh)
+* name = "ExampleConceptMapChoiceType"
 * status = #active
 * experimental = false
 * group[0].source = "http://fhir.ch/ig/ch-ig/StructureDefinition/ch-ig-example-score"
