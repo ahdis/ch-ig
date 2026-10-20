@@ -5,3 +5,5 @@ Alias: $sct-ch =                        http://snomed.info/sct|http://snomed.inf
 Alias: $icd10 =                         http://fhir.de/CodeSystem/bfarm/icd-10-gm
 Alias: $ucum =                          http://unitsofmeasure.org
 Alias: $sdc-extr-template =             http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-templateExtract
+Alias: $questionnaire-itemControl =  http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl
+Alias: $item-control =               http://hl7.org/fhir/questionnaire-item-control

@@ -1,0 +1,41 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "QuestionnaireItemControlDropDown",
+  "item": [
+    {
+      "answerOption": [
+        {
+          "valueCoding": {
+            "code": "373066001",
+            "system": "http://snomed.info/sct",
+            "display": "Yes"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "373067005",
+            "system": "http://snomed.info/sct",
+            "display": "No"
+          }
+        }
+      ],
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "code": "drop-down",
+                "system": "http://hl7.org/fhir/questionnaire-item-control"
+              }
+            ]
+          }
+        }
+      ],
+      "linkId": "choice",
+      "text": "Choice",
+      "type": "choice"
+    }
+  ],
+  "status": "draft"
+}

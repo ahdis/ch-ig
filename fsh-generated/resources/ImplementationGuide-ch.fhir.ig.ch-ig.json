@@ -56,18 +56,34 @@
       },
       {
         "reference": {
-          "reference": "Immunization/ImmunizationDarContained"
+          "reference": "Questionnaire/QuestionnaireItemControlDropDown"
         },
-        "name": "Immunization with a data-absent-reason dose number",
-        "description": "Immunization whose protocolApplied.doseNumberPositiveInt is a valueless primitive carrying a data-absent-reason, published as a normal example.",
+        "name": "itemControl drop-down (control)",
+        "description": "Control: the itemControl code drop-down is in the R4 core questionnaire-item-control code system (4.0.1), and validates without an issue.",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "Immunization/ImmunizationValueContained"
+          "reference": "Questionnaire/QuestionnaireItemControlTabContainer"
         },
-        "name": "Immunization with a positiveInt dose number",
-        "description": "Immunization whose protocolApplied.doseNumberPositiveInt is a plain positiveInt, published as a normal example.",
+        "name": "itemControl tab-container",
+        "description": "The itemControl code tab-container is defined in the questionnaire-item-control code system of the FHIR Extensions pack, but not in the R4 core copy (4.0.1) the validator resolves: Unknown code 'tab-container'.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Questionnaire/QuestionnaireItemControlTabContainerVersioned"
+        },
+        "name": "itemControl tab-container, coding pinned to the Extensions pack version",
+        "description": "The same as QuestionnaireItemControlTabContainer, with the coding pinned to version 5.3.0 of the code system (the FHIR Extensions pack version the IG Publisher loads). This validates without an issue.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Questionnaire/QuestionnaireItemControlTabContainerVersionedSdc"
+        },
+        "name": "itemControl tab-container, coding pinned to the Extensions pack version, SDC profile",
+        "description": "The same as QuestionnaireItemControlTabContainerVersioned, but the Questionnaire claims an SDC profile (as SDC forms do). Validating against the SDC profile brings the R4 core value set 4.0.1 back, and with it a code system version mismatch.",
         "exampleBoolean": true
       },
       {
@@ -76,22 +92,6 @@
         },
         "name": "Petra Meier",
         "description": "Example for CH Core Patient.",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "Questionnaire/QuestionnaireContainedDar"
-        },
-        "name": "Questionnaire containing an Immunization with a data-absent-reason dose number",
-        "description": "The contained Immunization is identical to ImmunizationDarStandalone. Compare the published contained copy with the standalone one.",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "Questionnaire/QuestionnaireContainedValue"
-        },
-        "name": "Questionnaire containing an Immunization with a positiveInt dose number",
-        "description": "The contained Immunization is identical to ImmunizationValueStandalone. Compare the published contained copy with the standalone one.",
         "exampleBoolean": true
       }
     ],
