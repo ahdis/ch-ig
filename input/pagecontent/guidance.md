@@ -44,3 +44,11 @@ CH IG example using a backport extension: [Cross-Version Encounter R4](Encounter
 {% fragment Encounter/xver-encounter-r4 XML EXCEPT:id|extension %}
 
 CH IG profile using a backport extension: [CH IG Encounter](StructureDefinition-ch-ig-encounter.html)
+
+### Conformance Statements
+Conformance statements are marked with an id and the actor they apply to, see
+[Managing Conformance Statements](https://build.fhir.org/ig/FHIR/ig-guidance/conformance-statements.html).
+
+§guid-1^ch-ig-client:The client **SHALL** send the patient identifier.§
+
+§§§

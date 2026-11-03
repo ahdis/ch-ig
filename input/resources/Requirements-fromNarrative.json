@@ -1,0 +1,23 @@
+{
+  "resourceType" : "Requirements",
+  "id" : "fromNarrative",
+  "url" : "http://fhir.ch/ig/ch-ig/Requirements/fromNarrative",
+  "name" : "FromNarrative",
+  "title" : "Narrative Conformance Statements",
+  "status" : "active",
+  "experimental" : false,
+  "description" : "Conformance statements found throughout the narrative of the IG consolidated into this computable resource for traceability purposes",
+  "actor" : [{
+    "reference" : "http://fhir.ch/ig/ch-ig/ActorDefinition/ch-ig-client",
+    "key" : "ch-ig-client"
+  }],
+  "statement" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "ch-ig-client"
+    }],
+    "key" : "guid-1",
+    "conformance" : ["SHALL"],
+    "requirement" : "The client **SHALL** send the patient identifier."
+  }]
+}
